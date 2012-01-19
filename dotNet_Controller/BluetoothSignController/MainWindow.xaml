@@ -1,0 +1,25 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Bluetooth Sign Controller" Height="191" Width="338" ResizeMode="CanMinimize" WindowStyle="ToolWindow">
+    <Grid FlowDirection="RightToLeft">
+        <ToolBar Height="26" HorizontalAlignment="Left" Name="ToolBar1" VerticalAlignment="Top" Width="368" FlowDirection="LeftToRight"></ToolBar>
+        <ToolBarTray Height="26" HorizontalAlignment="Left" Margin="12,0,0,0" Name="ToolBarTray1" VerticalAlignment="Top" Width="344" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="196,0,0,0" Name="cbPortsList" VerticalAlignment="Top" Width="120" FlowDirection="LeftToRight" />
+        <Button Content="Connect" Height="23" HorizontalAlignment="Left" Margin="97,0,0,0" Name="btnConnect" VerticalAlignment="Top" Width="93" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="74,38,0,0" Name="txtMessage" VerticalAlignment="Top" Width="185" CharacterCasing="Upper" AcceptsTab="False" MaxLength="63" IsReadOnly="False" FlowDirection="LeftToRight" />
+        <Button Content="Send" Height="23" HorizontalAlignment="Left" Margin="0,38,0,0" Name="btnSend" VerticalAlignment="Top" Width="68" />
+        <Label Content="Message:" Height="28" HorizontalAlignment="Left" Margin="252,36,0,0" Name="Label1" VerticalAlignment="Top" FlowDirection="LeftToRight" Width="64" />
+        <CheckBox Content="Repeat" Height="16" HorizontalAlignment="Left" Margin="0,65,0,0" Name="chkRepeat" VerticalAlignment="Top" />
+        <GroupBox Header="Color" Height="57" HorizontalAlignment="Left" Margin="78,91,0,0" Name="GroupBox1" VerticalAlignment="Top" Width="187" FlowDirection="LeftToRight">
+            <Grid>
+                <RadioButton Content="Green" Height="16" HorizontalAlignment="Left" Margin="6,12,0,0" Name="colorGreen" VerticalAlignment="Top" GroupName="color" IsChecked="True" />
+                <RadioButton Content="Orange" Height="16" HorizontalAlignment="Left" Margin="60,12,0,0" Name="colorOrange" VerticalAlignment="Top" GroupName="color" />
+                <RadioButton Content="Red" Height="16" HorizontalAlignment="Left" Margin="125,12,0,0" Name="colorRed" VerticalAlignment="Top" GroupName="color" />
+            </Grid>
+        </GroupBox>
+        <Label Content="Speed:" Height="28" HorizontalAlignment="Left" Margin="258,65,0,0" Name="Label2" VerticalAlignment="Top" FlowDirection="LeftToRight" />
+        <TextBlock Height="28" Margin="57,70,212,0" Name="txtSpeed" Text="" VerticalAlignment="Top" FlowDirection="LeftToRight" />
+        <Slider Height="23" HorizontalAlignment="Right" Margin="0,70,63,0" Name="Slider1" VerticalAlignment="Top" Width="143" Value="40" Maximum="100" Minimum="10" FlowDirection="LeftToRight" SmallChange="10" TickPlacement="BottomRight" IsSnapToTickEnabled="True" TickFrequency="10" />
+    </Grid>
+</Window>

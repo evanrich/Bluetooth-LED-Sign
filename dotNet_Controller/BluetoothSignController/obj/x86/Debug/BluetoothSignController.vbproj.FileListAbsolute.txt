@@ -1,0 +1,15 @@
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\bin\Debug\BluetoothSignController.exe
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\bin\Debug\BluetoothSignController.pdb
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\bin\Debug\BluetoothSignController.xml
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\MainWindow.baml
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\MainWindow.g.vb
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\Application.g.vb
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\BluetoothSignController_MarkupCompile.cache
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\BluetoothSignController.g.resources
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\BluetoothSignController.Resources.resources
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\BluetoothSignController.exe
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\BluetoothSignController.xml
+C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\BluetoothSignController.pdb
