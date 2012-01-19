@@ -132,6 +132,7 @@ public class BluetoothChat extends Activity {
 	public final String hundred = "z"; // "z"
 
 	// Direction Controls
+
 	public final String left = "o"; // Right -> Left
 	public final String right = "p"; // Left -> Right
 	public String msgdirection = "o";
@@ -141,12 +142,12 @@ public class BluetoothChat extends Activity {
 		startVoiceRecognitionActivity();
 	}
 
-	// public void togglerepeat(View v) {
-	// String o;
-	// o = ".";
-	// history.add(o);
-	// sendMessage(o);
-	// }
+	public void togglerepeat(View v) {
+		String o;
+		o = ".";
+		history.add(o);
+		sendMessage(o);
+	}
 
 	/**
 	 * Fire an intent to start the speech recognition activity.
@@ -318,14 +319,22 @@ public class BluetoothChat extends Activity {
 			Log.e(TAG, "- ON PAUSE -");
 	}
 
-	/*
-	 * @Override public void onStop() { super.onStop(); if (D) Log.e(TAG,
-	 * "-- ON STOP --"); }
-	 * 
-	 * @Override public void onDestroy() { super.onDestroy(); // Stop the
-	 * Bluetooth chat services if (mChatService != null) mChatService.stop(); if
-	 * (D) Log.e(TAG, "--- ON DESTROY ---"); }
-	 */
+	@Override
+	public void onStop() {
+		super.onStop();
+		if (D)
+			Log.e(TAG, "-- ON STOP --");
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		// Stop the Bluetooth chat services
+		if (mChatService != null)
+			mChatService.stop();
+		if (D)
+			Log.e(TAG, "--- ON DESTROY ---");
+	}
 
 	private void ensureDiscoverable() {
 		if (D)
