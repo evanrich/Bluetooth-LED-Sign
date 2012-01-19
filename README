@@ -1,0 +1,10 @@
+If you use the Arduino 1.0 code, you will need to copy the ht1632C library into your libraries folder.
+NOTE: the Arduino 0023 code runs slower, but has been shown to work on >2 displays.  The 1.0 code only 
+works for 2 displays at the moment, as there is an issue with the library.
+
+Credits:
+Arduino library code (fast): https://code.google.com/p/ht1632c/
+old Arduino Code (2+ displays): http://arduino.cc/forum/index.php/topic,50326.0.html
+
+Android application:
+Code is based on the included bluetooth chat example, customized and changed to work with the Bluetooth Sign.
