@@ -48,6 +48,7 @@ The project has many uses, from digital cube/office name or status signs (out of
 
 
 **Questions/Support**
+* The Wiki: https://github.com/evanrich/Bluetooth-LED-Sign/wiki
 
 * Original library/Sure 3216 information on Arduino.cc Forums @ [http://arduino.cc/forum/index.php/board,6.0.html](http://arduino.cc)
 
