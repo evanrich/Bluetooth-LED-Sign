@@ -1,4 +1,3 @@
-
 # Bluetooth LED Sign - Control Sure 3216 displays from your computer/phone via Bluetooth
 
 The Bluetooth sign project started out originally from me wanting a wireless sign I could put in my car to tell drivers to get off my ass when they were following too close.    It started as just a daughter card that was shaped to connect directly to the back of a Sure 3216 (3mm) display.  I then wanted to be able to have a much larger display, and instead of buying 3216 boards at $24+ plus shipping, I went about designing the equivelent of 3x 3216 boards. 
@@ -17,7 +16,7 @@ The project has many uses, from digital cube/office name or status signs (out of
 **Features**
 
 * Small Size: 54x39mm ( 2.13" x 1.54")
-* Custom LED Board is 15.15"3.20"
+* Custom LED Board is 15.15" x 3.20"
 * Multiple mounting options: Controller plugs directly into back of Sure 3216 or custom 9616 boards
 * Low Power: Controller operates around 50-80mA (needs to be tested) with a 2000mAh battery it can run >4 hours on single charge
 * Wireless: BLUETOOTH!!  works up to 30+ feet away
