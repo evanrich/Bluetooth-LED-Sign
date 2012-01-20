@@ -10,7 +10,7 @@ The project has many uses, from digital cube/office name or status signs (out of
 * https://github.com/evanrich/Bluetooth-LED-Sign
 
 **Licensing**
-* This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Bluetooth LED Sign</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/evanrich/Bluetooth-LED-Sign" property="cc:attributionName" rel="cc:attributionURL">Evan Richardson</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://code.google.com/p/ht1632c/" rel="dct:source">code.google.com</a>.
 
 **Known issues**
 
