@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.0">
+<eagle version="6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2101,11 +2101,14 @@ Based on the following sources:
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.2" drill="0.2">
-<clearance class="0" value="0.2"/>
+<class number="0" name="default" width="0.254" drill="0.254">
+<clearance class="0" value="0.3048"/>
 </class>
-<class number="1" name="+5V" width="0.3048" drill="0.2">
-<clearance class="1" value="0.2"/>
+<class number="1" name="+5V" width="0.3556" drill="0.254">
+<clearance class="1" value="0.3048"/>
+</class>
+<class number="2" name="GND" width="0.3048" drill="0.254">
+<clearance class="2" value="0.3048"/>
 </class>
 </classes>
 <parts>
@@ -2140,9 +2143,9 @@ Based on the following sources:
 <part name="C3" library="SparkFun" deviceset="CAP" device="0805" value="100nF"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="C2" library="SparkFun" deviceset="CAP" device="0805" value="10pf"/>
+<part name="C2" library="SparkFun" deviceset="CAP" device="0805" value="10pF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="C1" library="SparkFun" deviceset="CAP" device="0805" value="10pf"/>
+<part name="C1" library="SparkFun" deviceset="CAP" device="0805" value="10pF"/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="C4" library="SparkFun" deviceset="CAP" device="0805" value="100nF"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
@@ -3277,7 +3280,7 @@ Based on the following sources:
 <junction x="231.14" y="-50.8"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="U2" gate="G$1" pin="VSS"/>
 <wire x1="60.96" y1="12.7" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
@@ -6301,7 +6304,7 @@ Based on the following sources:
 <junction x="-104.14" y="63.5"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="U9" gate="G$1" pin="VSS"/>
 <wire x1="-106.68" y1="45.72" x2="-104.14" y2="45.72" width="0.1524" layer="91"/>
@@ -9435,7 +9438,7 @@ Based on the following sources:
 </bus>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="U15" gate="G$1" pin="VSS"/>
 <wire x1="17.78" y1="25.4" x2="30.48" y2="25.4" width="0.1524" layer="91"/>
