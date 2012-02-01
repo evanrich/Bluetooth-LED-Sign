@@ -9,6 +9,20 @@
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -2157,47 +2171,6 @@ design rules under a new name.</description>
 <wire x1="7.05" y1="33" x2="7.15" y2="33.1" width="0.254" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="19,1,882dff4ec770b013"/>
-<approved hash="19,1,15c3ed1e0d71981b"/>
-<approved hash="5,1,6033f57ff9a69394"/>
-<approved hash="5,1,b7d2373b20701f67"/>
-<approved hash="5,1,e6417dc1e27383ae"/>
-<approved hash="19,1,5722975692d752a3"/>
-<approved hash="5,1,43f3f344fdbabbbe"/>
-<approved hash="5,1,d57b521d689b52d3"/>
-<approved hash="5,1,f47d1d8d816d26f1"/>
-<approved hash="5,1,7e9032b0e1f30b95"/>
-<approved hash="5,1,3f03997b19ae98a8"/>
-<approved hash="5,1,31b0997f19a69617"/>
-<approved hash="5,1,3421997f19a69386"/>
-<approved hash="5,1,669c507c2be8928a"/>
-<approved hash="5,1,669dc6a9fd04d2b2"/>
-<approved hash="5,1,d59dff0b3d049791"/>
-<approved hash="19,1,e2f994cd95f9e3cd"/>
-<approved hash="19,1,2b069d329cf92acd"/>
-<approved hash="19,1,3d240b1009e43fd0"/>
-<approved hash="19,1,7d23a8d7af0b7aff"/>
-<approved hash="19,1,28879cb39d742940"/>
-<approved hash="19,1,3ea50a9108693c5d"/>
-<approved hash="19,1,093a2b0e29f20bc6"/>
-<approved hash="19,1,1f18bd2cbcef1edb"/>
-<approved hash="5,1,be18199134d361c0"/>
-<approved hash="5,1,4e79f181aca211a3"/>
-<approved hash="5,1,be9630bc40d8c08b"/>
-<approved hash="5,1,be9630a000cc808b"/>
-<approved hash="5,1,7e9bf2f579fb897f"/>
-<approved hash="5,1,4679f997bb740663"/>
-<approved hash="5,1,b618118723057600"/>
-<approved hash="5,16,5ecfb797a21a3353"/>
-<approved hash="5,16,e9883b8aae1f080c"/>
-<approved hash="5,16,c40f160aae1f080b"/>
-<approved hash="5,16,73489a17a21a3354"/>
-<approved hash="5,16,9082428aae1f0806"/>
-<approved hash="5,16,27c5ce97a21a3359"/>
-<approved hash="5,16,5944757d942e94d9"/>
-<approved hash="5,16,cac2cb5b570cafb4"/>
-</errors>
 </board>
 </drawing>
 </eagle>
