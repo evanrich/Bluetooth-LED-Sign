@@ -2093,6 +2093,67 @@ Based on the following sources:
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Aesthetics">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find non-functional items- supply symbols, logos, notations, frame blocks, etc.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="FIDUCIAL-1.5X3">
+<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2.5">
+<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="MICRO-FIDUCIAL">
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FIDUCIAL">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FIDUCIAL" prefix="JP">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1.5X3" package="FIDUCIAL-1.5X3">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2.5" package="FIDUCIAL-1X2.5">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 <attribute name="REV" value="1.0"/>
@@ -2617,6 +2678,10 @@ Based on the following sources:
 <part name="FRAME1" library="frames" deviceset="FRAME_C_L" device=""/>
 <part name="FRAME2" library="frames" deviceset="FRAME_C_L" device=""/>
 <part name="FRAME3" library="frames" deviceset="FRAME_C_L" device=""/>
+<part name="JP1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2.5"/>
+<part name="JP2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2.5"/>
+<part name="JP3" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2.5"/>
+<part name="JP4" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2.5"/>
 </parts>
 <sheets>
 <sheet>
@@ -2803,6 +2868,10 @@ Based on the following sources:
 <instance part="GND12" gate="1" x="241.3" y="-66.04"/>
 <instance part="FRAME1" gate="G$1" x="-276.86" y="-220.98"/>
 <instance part="FRAME1" gate="G$2" x="175.26" y="-220.98"/>
+<instance part="JP1" gate="G$1" x="177.8" y="142.24"/>
+<instance part="JP2" gate="G$1" x="182.88" y="142.24"/>
+<instance part="JP3" gate="G$1" x="187.96" y="142.24"/>
+<instance part="JP4" gate="G$1" x="193.04" y="142.24"/>
 </instances>
 <busses>
 <bus name="ANODE_A[0..7]">
