@@ -1800,7 +1800,6 @@ design rules under a new name.</description>
 <wire x1="8.87500625" y1="30.5000125" x2="8.87500625" y2="30.7500125" width="0.254" layer="1"/>
 <wire x1="7.47500625" y1="30.0000125" x2="8.87500625" y2="30.0000125" width="0.254" layer="1"/>
 <wire x1="8.87500625" y1="30.0000125" x2="8.87500625" y2="30.7500125" width="0.254" layer="1"/>
-<via x="17.225" y="21.38" extent="1-16" drill="0.3302"/>
 <via x="19" y="35" extent="1-16" drill="0.3302"/>
 <via x="36" y="27" extent="1-16" drill="0.3302" diameter="0.8382"/>
 <via x="34.12" y="23.13" extent="1-16" drill="0.3302" diameter="0.8382" shape="square"/>
@@ -2219,21 +2218,21 @@ design rules under a new name.</description>
 <approved hash="5,1,669dc6a9fd04d2b2"/>
 <approved hash="19,1,75b7e1ee59e5cdbc"/>
 <approved hash="19,1,ef096c69d4625702"/>
-<approved hash="19,1,6d84f1e449f8d598"/>
 <approved hash="19,1,f73a7c63c47f4f26"/>
+<approved hash="19,1,6d84f1e449f8d598"/>
 <approved hash="5,1,be18199134d361c0"/>
 <approved hash="5,1,4e79f181aca211a3"/>
 <approved hash="5,1,6627627047b52dd6"/>
 <approved hash="5,1,4679f997bb740663"/>
+<approved hash="5,1,ebda5cc175cef5e5"/>
+<approved hash="5,1,b618118723057600"/>
+<approved hash="5,1,116878d78518167d"/>
 <approved hash="5,1,7c1bea125919adcf"/>
 <approved hash="5,1,eef9ff41f45683e4"/>
-<approved hash="5,1,b618118723057600"/>
-<approved hash="5,1,ebda5cc175cef5e5"/>
-<approved hash="5,1,116878d78518167d"/>
-<approved hash="5,1,699c50143500827a"/>
-<approved hash="5,1,00e81931061168b5"/>
 <approved hash="5,1,699dc6c1e3ecc242"/>
+<approved hash="5,1,699c50143500827a"/>
 <approved hash="5,1,60b024ae190d90f5"/>
+<approved hash="5,1,00e81931061168b5"/>
 <approved hash="5,1,5d3b50099012416c"/>
 <approved hash="5,16,5ecfb797a21a3353"/>
 <approved hash="5,16,e9883b8aae1f080c"/>
