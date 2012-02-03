@@ -1,4 +1,4 @@
-# Bluetooth LED Sign - Control Sure 3216 displays from your computer/phone via Bluetooth
+# Bluetooth LED Sign - Control Sure 3216 displays from your computer/Android phone via Bluetooth
 
 The Bluetooth sign project started out originally from me wanting a wireless sign I could put in my car to tell drivers to get off my ass when they were following too close.    It started as just a daughter card that was shaped to connect directly to the back of a Sure 3216 (3mm) display.  I then wanted to be able to have a much larger display, and instead of buying 3216 boards at $24+ plus shipping, I went about designing the equivelent of 3x 3216 boards. 
 
