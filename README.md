@@ -21,7 +21,7 @@ The project has many uses, from digital cube/office name or status signs (out of
 * Multiple mounting options: Controller plugs directly into back of Sure 3216 (3MM) or custom 9616 boards
 * Low Power: Controller operates around 50-80mA (needs to be tested) with a 2000mAh battery the displays + controller can run >4 hours on single charge
 * Wireless: **BLUETOOTH!!**  works up to 30+ feet away
-* Charges/Runs via USB port (500mA only, 12V wall plug option being added)
+* Charges/Runs via USB port (500mA only, 12V wall plug option being considered)
 * Fuel Guage IC has been added to allow reporting/displaying of remaining capacity (Code needs to be added however)
 * Android and VB.NET apps can both control message color and speed, as well as looping the message until a new message is sent.
 * Android: Voice Control - enter messages using your voice
