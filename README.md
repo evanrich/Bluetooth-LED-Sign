@@ -1,4 +1,4 @@
-# Bluetooth LED Sign - Control Sure 3216 displays from your computer/phone via Bluetooth
+# Bluetooth LED Sign - Control Sure 3216 displays from your computer/Android phone via Bluetooth
 
 The Bluetooth sign project started out originally from me wanting a wireless sign I could put in my car to tell drivers to get off my ass when they were following too close.    It started as just a daughter card that was shaped to connect directly to the back of a Sure 3216 (3mm) display.  I then wanted to be able to have a much larger display, and instead of buying 3216 boards at $24+ plus shipping, I went about designing the equivelent of 3x 3216 boards. 
 
@@ -17,10 +17,11 @@ The project has many uses, from digital cube/office name or status signs (out of
 
 * Small Size: 54x39mm ( 2.13" x 1.54")
 * Custom LED Board is 15.15" x 3.20"
-* Multiple mounting options: Controller plugs directly into back of Sure 3216 or custom 9616 boards
-* Low Power: Controller operates around 50-80mA (needs to be tested) with a 2000mAh battery it can run >4 hours on single charge
-* Wireless: BLUETOOTH!!  works up to 30+ feet away
-* Charges/Runs via USB port (500mA only, 12V wall plug option being added)
+* Low cost 2 layer boards (controller PCB can be made for around $6 from BatchPCB.com)
+* Multiple mounting options: Controller plugs directly into back of Sure 3216 (3MM) or custom 9616 boards
+* Low Power: Controller operates around 50-80mA (needs to be tested) with a 2000mAh battery the displays + controller can run >4 hours on single charge
+* Wireless: **BLUETOOTH!!**  works up to 30+ feet away
+* Charges/Runs via USB port (500mA only, 12V wall plug option being considered)
 * Fuel Guage IC has been added to allow reporting/displaying of remaining capacity (Code needs to be added however)
 * Android and VB.NET apps can both control message color and speed, as well as looping the message until a new message is sent.
 * Android: Voice Control - enter messages using your voice
@@ -41,8 +42,8 @@ The project has many uses, from digital cube/office name or status signs (out of
 * Develop some sort of user guide/documentation
 * Finalize BOM
 * Write Fuel Guage code to allow transmission or display of remaining battery capacity
-* Prototype 96x16 board(Currently routing board traces)
-* Confirm board/schematic for controller (device is 1/2 the size the first prototype was)
+* Prototype 96x16 board(Currently waiting for boards to be made)
+* Finalize board/schematic for controller (device is 1/2 the size the first prototype was)
 * Find or develop tool to allow updating firmware on the board (USB parts are there, so new firmware updates can be sent out to users)
 * Other stuff
 
