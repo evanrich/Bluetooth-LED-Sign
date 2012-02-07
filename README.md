@@ -39,8 +39,8 @@ The project has many uses, from digital cube/office name or status signs (out of
 
 **To-Do**
 
-* Develop some sort of user guide/documentation
-* Finalize BOM
+* Develop some sort of user guide/documentation (Wiki pages started, in-progress)
+* Finalize BOM (~95% complete)
 * Write Fuel Guage code to allow transmission or display of remaining battery capacity
 * Prototype 96x16 board(Currently waiting for boards to be made)
 * Finalize board/schematic for controller (device is 1/2 the size the first prototype was)
