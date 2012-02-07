@@ -15,7 +15,7 @@ The project has many uses, from digital cube/office name or status signs (out of
 
 **Features**
 
-* Small Size: 54x39mm ( 2.13" x 1.54")
+* Small Size: 52.936x39mm ( 2.08" x 1.54")
 * Custom LED Board is 15.15" x 3.20"
 * Low cost 2 layer boards (controller PCB can be made for around $6 from BatchPCB.com)
 * Multiple mounting options: Controller plugs directly into back of Sure 3216 (3MM) or custom 9616 boards
