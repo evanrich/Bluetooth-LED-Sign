@@ -26,7 +26,7 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="14" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="18" fill="1" visible="yes" active="no"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
@@ -5927,9 +5927,11 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <part name="U100" library="SparkFun" deviceset="MCP73831" device=""/>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="330"/>
 <part name="GND18" library="SparkFun" deviceset="GND" device=""/>
-<part name="C100" library="SparkFun" deviceset="CAP" device="0603-CAP" value="4.7uF"/>
+<part name="C100" library="SparkFun" deviceset="CAP" device="0603-CAP" value="4.7uF">
+<attribute name="NEWARK_PN" value="48T2909"/>
+</part>
 <part name="GND19" library="SparkFun" deviceset="GND" device=""/>
-<part name="J100" library="SparkFun" deviceset="M02" device="-JST-2MM-SMT"/>
+<part name="J100" library="SparkFun" deviceset="M02" device="-JST-2MM-SMT" value="38K8067 "/>
 <part name="GND20" library="SparkFun" deviceset="GND" device=""/>
 <part name="R100" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="2K"/>
 <part name="GND22" library="SparkFun" deviceset="GND" device=""/>
@@ -6034,7 +6036,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <instance part="U100" gate="G$1" x="109.22" y="160.02"/>
 <instance part="R1" gate="G$1" x="93.98" y="149.86" rot="R180"/>
 <instance part="GND18" gate="1" x="121.92" y="152.4"/>
-<instance part="C100" gate="G$1" x="134.62" y="154.94"/>
+<instance part="C100" gate="G$1" x="134.62" y="154.94">
+<attribute name="NEWARK_PN" x="134.62" y="154.94" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND19" gate="1" x="134.62" y="147.32"/>
 <instance part="R100" gate="G$1" x="127" y="147.32" rot="R270"/>
 <instance part="GND22" gate="1" x="127" y="137.16"/>
