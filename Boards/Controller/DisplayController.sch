@@ -6019,7 +6019,6 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <part name="FRAME3" library="SparkFun" deviceset="FRAME-LETTER" device=""/>
 <part name="S2" library="SparkFun-Electromechanical" deviceset="SWITCH-SPDT" device="-SMD-A"/>
 <part name="GND15" library="SparkFun" deviceset="GND" device=""/>
-<part name="GND17" library="SparkFun" deviceset="GND" device=""/>
 <part name="U$1" library="MyParts" deviceset="IFSC" device="1515AHER220M01">
 <attribute name="NEWARK_PN" value="47T5127"/>
 </part>
@@ -6082,7 +6081,6 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <instance part="FRAME3" gate="G$2" x="147.32" y="0"/>
 <instance part="S2" gate="1" x="152.4" y="63.5"/>
 <instance part="GND15" gate="1" x="172.72" y="58.42"/>
-<instance part="GND17" gate="1" x="182.88" y="45.72"/>
 <instance part="U$1" gate="G$1" x="185.674" y="111.76">
 <attribute name="NEWARK_PN" x="185.674" y="111.76" size="1.778" layer="96"/>
 </instance>
@@ -6148,10 +6146,6 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <wire x1="157.48" y1="60.96" x2="162.56" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="60.96" x2="172.72" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="GND17" gate="1" pin="GND"/>
-<wire x1="182.88" y1="48.26" x2="182.88" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
