@@ -5924,7 +5924,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <part name="J2" library="con-lstb" deviceset="MA08-2" device="">
 <attribute name="OC_NEWARK" value="08N6809 "/>
 </part>
-<part name="U100" library="SparkFun" deviceset="MCP73831" device=""/>
+<part name="U100" library="SparkFun" deviceset="MCP73831" device="">
+<attribute name="NEWARK_PN" value="56K7045"/>
+</part>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="330"/>
 <part name="GND18" library="SparkFun" deviceset="GND" device=""/>
 <part name="C100" library="SparkFun" deviceset="CAP" device="0603-CAP" value="4.7uF">
@@ -5957,7 +5959,7 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <part name="U3" library="MyParts" deviceset="ATMEGA328P-MU" device=""/>
 <part name="U$2" library="MyParts" deviceset="DX_BT_MODULE" device=""/>
 <part name="U1" library="linear" deviceset="MCP1703" device="CB">
-<attribute name="NEWARKPN" value="88H9817 "/>
+<attribute name="NEWARKPN" value="40M0637"/>
 </part>
 <part name="Q1" library="transistor-small-signal" deviceset="BSS123" device="" value="BSS138">
 <attribute name="NEWARKPN" value="25M7814 "/>
@@ -5987,7 +5989,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <part name="RN3" library="resistor-dil" deviceset="4R-N" device="EXB38V" value="1k">
 <attribute name="OC_NEWARK" value="15M6870"/>
 </part>
-<part name="J1" library="MyParts" deviceset="USB" device="0001LF"/>
+<part name="J1" library="MyParts" deviceset="USB" device="0001LF">
+<attribute name="NEWARK_PN" value="82R7424"/>
+</part>
 <part name="C5" library="SparkFun" deviceset="CAP" device="0603-CAP" value="100nF"/>
 <part name="GND2" library="SparkFun" deviceset="GND" device=""/>
 <part name="RN2" library="resistor-dil" deviceset="4R-N" device="EXB38V" value="10k">
@@ -6033,7 +6037,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 </plain>
 <instances>
 <instance part="GND16" gate="1" x="33.02" y="149.86"/>
-<instance part="U100" gate="G$1" x="109.22" y="160.02"/>
+<instance part="U100" gate="G$1" x="109.22" y="160.02">
+<attribute name="NEWARK_PN" x="109.22" y="160.02" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="R1" gate="G$1" x="93.98" y="149.86" rot="R180"/>
 <instance part="GND18" gate="1" x="121.92" y="152.4"/>
 <instance part="C100" gate="G$1" x="134.62" y="154.94">
@@ -6056,7 +6062,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <instance part="GND1" gate="1" x="182.88" y="142.24"/>
 <instance part="P+1" gate="1" x="165.1" y="162.56"/>
 <instance part="+3V1" gate="G$1" x="200.66" y="162.56"/>
-<instance part="J1" gate="G$1" x="27.94" y="162.56" rot="R180"/>
+<instance part="J1" gate="G$1" x="27.94" y="162.56" rot="R180">
+<attribute name="NEWARK_PN" x="27.94" y="162.56" size="1.778" layer="96" rot="R180" display="off"/>
+</instance>
 <instance part="U101" gate="G$1" x="187.96" y="93.98"/>
 <instance part="GND23" gate="1" x="187.96" y="76.2"/>
 <instance part="GND24" gate="1" x="203.2" y="81.28"/>
