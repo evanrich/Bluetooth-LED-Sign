@@ -29,6 +29,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -324,6 +325,17 @@ public class BluetoothChat extends Activity {
 		super.onStop();
 		if (D)
 			Log.e(TAG, "-- ON STOP --");
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		setContentView(R.layout.main);
+		if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+			Log.e(TAG, "ORIENTATION_LANDSCAPE");
+		} else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+			Log.e(TAG, "ORIENTATION_PORTRAIT");
+		}
 	}
 
 	@Override
