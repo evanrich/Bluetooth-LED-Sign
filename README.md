@@ -15,7 +15,7 @@ The project has many uses, from digital cube/office name or status signs (out of
 
 **Features**
 
-* Small Size: 54x39mm ( 2.13" x 1.54")
+* Small Size: 52.936x39mm ( 2.08" x 1.54")
 * Custom LED Board is 15.15" x 3.20"
 * Low cost 2 layer boards (controller PCB can be made for around $6 from BatchPCB.com)
 * Multiple mounting options: Controller plugs directly into back of Sure 3216 (3MM) or custom 9616 boards
@@ -39,8 +39,8 @@ The project has many uses, from digital cube/office name or status signs (out of
 
 **To-Do**
 
-* Develop some sort of user guide/documentation
-* Finalize BOM
+* Develop some sort of user guide/documentation (Wiki pages started, in-progress)
+* Finalize BOM (~95% complete)
 * Write Fuel Guage code to allow transmission or display of remaining battery capacity
 * Prototype 96x16 board(Currently waiting for boards to be made)
 * Finalize board/schematic for controller (device is 1/2 the size the first prototype was)
