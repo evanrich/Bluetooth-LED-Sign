@@ -31,8 +31,7 @@ The project has many uses, from digital cube/office name or status signs (out of
 
 **Known issues**
 
-* New Arduino 1.0 code will not work with more than 2 displays
-* Old Arduino 0023 code is slow when using text scaling (2 instead of 1)
+* Arduino library code will not work with more than 2 displays (issue with the library, not my code)
 * Android: If a Repeat is issued to the display, it will loop the text until a new message is sent.
 * VB.NET: If a repeat and color change are issued, the display will not stop repeating until a new color is sent.
 
