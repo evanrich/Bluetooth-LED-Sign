@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -5350,7 +5350,7 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <text x="175.26" y="63.5" size="1.778" layer="95" font="vector">Power Switch</text>
 <text x="149.86" y="25.4" size="5.08" layer="92" ratio="12">LED Display Controller</text>
 <text x="162.56" y="124.46" size="5.08" layer="95">3.7-&gt;5V Boost</text>
-<frame x1="0" y1="35.56" x2="248.92" y2="185.42" columns="8" rows="5" layer="91"/>
+<frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94" border-right="no" border-bottom="no"/>
 </plain>
 <instances>
 <instance part="GND16" gate="1" x="33.02" y="149.86"/>
@@ -5626,7 +5626,7 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <text x="30.48" y="170.18" size="5.08" layer="95">Bluetooth</text>
 <text x="40.64" y="96.52" size="5.08" layer="95">USB</text>
 <text x="149.86" y="25.4" size="5.08" layer="92" ratio="12">LED Display Controller</text>
-<frame x1="0" y1="35.56" x2="248.92" y2="185.42" columns="8" rows="5" layer="91"/>
+<frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94" border-right="no" border-bottom="no"/>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
@@ -6013,7 +6013,7 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <text x="48.26" y="142.24" size="5.08" layer="95">Microcontroller</text>
 <text x="162.56" y="139.7" size="5.08" layer="95">Fuel Guage</text>
 <text x="149.86" y="25.4" size="5.08" layer="92" ratio="12">LED Display Controller</text>
-<frame x1="0" y1="35.56" x2="248.92" y2="185.42" columns="8" rows="5" layer="91"/>
+<frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94" border-right="no" border-bottom="no"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
