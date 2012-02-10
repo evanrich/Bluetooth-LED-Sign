@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -5339,6 +5339,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <part name="GND17" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
 <part name="P+10" library="supply1" deviceset="VCC" device=""/>
+<part name="GND21" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND27" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND28" library="SparkFun" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5654,13 +5657,16 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <instance part="RN2" gate="D" x="81.28" y="157.48" rot="R90"/>
 <instance part="RN2" gate="A" x="109.22" y="157.48" rot="R270"/>
 <instance part="J2" gate="G$1" x="203.2" y="68.58"/>
-<instance part="J100" gate="G$1" x="160.02" y="93.98"/>
-<instance part="GND20" gate="1" x="172.72" y="86.36"/>
+<instance part="J100" gate="G$1" x="203.2" y="127"/>
+<instance part="GND20" gate="1" x="215.9" y="119.38"/>
 <instance part="J3" gate="G$1" x="200.66" y="93.98" smashed="yes">
 <attribute name="NAME" x="196.342" y="99.822" size="1.778" layer="95"/>
 </instance>
 <instance part="RN1" gate="C" x="83.82" y="55.88"/>
 <instance part="R7" gate="G$1" x="22.86" y="134.62" rot="R180"/>
+<instance part="GND21" gate="1" x="213.36" y="88.9"/>
+<instance part="GND27" gate="1" x="220.98" y="76.2" rot="R90"/>
+<instance part="GND28" gate="1" x="185.42" y="66.04"/>
 </instances>
 <busses>
 </busses>
@@ -5704,9 +5710,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <wire x1="22.86" y1="50.8" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="195.58" y1="68.58" x2="190.5" y2="68.58" width="0.1524" layer="91"/>
-<label x="190.5" y="68.58" size="1.778" layer="95"/>
+<wire x1="195.58" y1="68.58" x2="185.42" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="8"/>
+<pinref part="GND28" gate="1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="210.82" y1="73.66" x2="215.9" y2="73.66" width="0.1524" layer="91"/>
@@ -5716,19 +5722,21 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <wire x1="215.9" y1="78.74" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="76.2" x2="218.44" y2="76.2" width="0.1524" layer="91"/>
 <junction x="215.9" y="76.2"/>
-<label x="218.44" y="76.2" size="1.778" layer="95"/>
 <pinref part="J2" gate="G$1" pin="11"/>
 <pinref part="J2" gate="G$1" pin="13"/>
 <pinref part="J2" gate="G$1" pin="15"/>
+<pinref part="GND27" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="210.82" y1="91.44" x2="215.9" y2="91.44" width="0.1524" layer="91"/>
-<label x="215.9" y="91.44" size="1.778" layer="95"/>
+<wire x1="210.82" y1="91.44" x2="213.36" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="91.44" x2="213.36" y2="90.17" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="6"/>
+<pinref part="GND21" gate="1" pin="GND"/>
+<wire x1="213.36" y1="91.44" x2="213.36" y2="90.17" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="172.72" y1="93.98" x2="167.64" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="88.9" x2="172.72" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="127" x2="210.82" y2="127" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="121.92" x2="215.9" y2="127" width="0.1524" layer="91"/>
 <pinref part="J100" gate="G$1" pin="1"/>
 <pinref part="GND20" gate="1" pin="GND"/>
 </segment>
@@ -5799,9 +5807,11 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <label x="78.74" y="76.2" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="193.04" y1="91.44" x2="187.96" y2="91.44" width="0.1524" layer="91"/>
-<label x="187.96" y="91.44" size="1.778" layer="95"/>
+<wire x1="193.04" y1="91.44" x2="190.5" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="91.44" x2="190.5" y2="90.17" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="90.17" x2="187.96" y2="90.17" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="5"/>
+<label x="187.96" y="90.17" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -5934,58 +5944,64 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <net name="D10" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="7"/>
-<wire x1="210.82" y1="68.58" x2="215.9" y2="68.58" width="0.1524" layer="91"/>
-<label x="215.9" y="68.58" size="1.778" layer="95"/>
+<wire x1="210.82" y1="68.58" x2="213.36" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="68.58" x2="213.36" y2="69.85" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="69.85" x2="215.9" y2="69.85" width="0.1524" layer="91"/>
+<label x="215.9" y="69.85" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MISO" class="0">
 <segment>
-<wire x1="193.04" y1="96.52" x2="187.96" y2="96.52" width="0.1524" layer="91"/>
-<label x="187.96" y="96.52" size="1.778" layer="95"/>
+<wire x1="193.04" y1="96.52" x2="190.5" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="96.52" x2="190.5" y2="97.79" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="97.79" x2="187.96" y2="97.79" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="1"/>
+<label x="187.96" y="97.79" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
 <wire x1="210.82" y1="60.96" x2="215.9" y2="60.96" width="0.1524" layer="91"/>
-<label x="215.9" y="60.96" size="1.778" layer="95"/>
+<label x="215.9" y="60.96" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
 <wire x1="210.82" y1="93.98" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
-<label x="215.9" y="93.98" size="1.778" layer="95"/>
 <pinref part="J3" gate="G$1" pin="4"/>
+<label x="215.9" y="93.98" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="5"/>
 <wire x1="210.82" y1="66.04" x2="215.9" y2="66.04" width="0.1524" layer="91"/>
-<label x="215.9" y="66.04" size="1.778" layer="95"/>
+<label x="215.9" y="66.04" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
 <segment>
 <wire x1="193.04" y1="93.98" x2="187.96" y2="93.98" width="0.1524" layer="91"/>
-<label x="187.96" y="93.98" size="1.778" layer="95"/>
 <pinref part="J3" gate="G$1" pin="3"/>
+<label x="187.96" y="93.98" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
 <wire x1="195.58" y1="60.96" x2="190.5" y2="60.96" width="0.1524" layer="91"/>
-<label x="190.5" y="60.96" size="1.778" layer="95"/>
+<label x="190.5" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PACK+" class="0">
 <segment>
-<wire x1="167.64" y1="96.52" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
-<label x="172.72" y="96.52" size="1.778" layer="95"/>
+<wire x1="210.82" y1="129.54" x2="215.9" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="J100" gate="G$1" pin="2"/>
+<label x="215.9" y="129.54" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
-<wire x1="210.82" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
-<label x="215.9" y="96.52" size="1.778" layer="95" font="vector"/>
+<wire x1="210.82" y1="96.52" x2="213.36" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="96.52" x2="213.36" y2="97.79" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="97.79" x2="215.9" y2="97.79" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="2"/>
+<label x="215.9" y="97.79" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -6276,9 +6292,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <segment>
 <pinref part="U3" gate="A" pin="PC6"/>
 <wire x1="53.34" y1="86.36" x2="38.1" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="86.36" x2="38.1" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="83.82" x2="35.56" y2="83.82" width="0.1524" layer="91"/>
-<label x="35.56" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="38.1" y1="86.36" x2="38.1" y2="85.09" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="85.09" x2="35.56" y2="85.09" width="0.1524" layer="91"/>
+<label x="35.56" y="85.09" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -6343,9 +6359,9 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <segment>
 <pinref part="U3" gate="A" pin="PC4"/>
 <wire x1="53.34" y1="91.44" x2="38.1" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="91.44" x2="38.1" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
-<label x="35.56" y="93.98" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="38.1" y1="91.44" x2="38.1" y2="92.71" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="92.71" x2="35.56" y2="92.71" width="0.1524" layer="91"/>
+<label x="35.56" y="92.71" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U5" gate="G$1" pin="SDA"/>
@@ -6385,6 +6401,7 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <wire x1="149.86" y1="101.6" x2="147.32" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="96.52" x2="149.86" y2="101.6" width="0.1524" layer="91"/>
 <junction x="149.86" y="101.6"/>
+<label x="147.32" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$14" class="0">
