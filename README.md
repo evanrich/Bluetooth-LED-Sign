@@ -40,8 +40,10 @@ The project has many uses, from digital cube/office name or status signs (out of
 * Develop some sort of user guide/documentation (Wiki pages started, in-progress)
 * Finalize BOM (~95% complete)
 * Write Fuel Guage code to allow transmission or display of remaining battery capacity
-* Prototype 96x16 board(Currently waiting for boards to be made)
-* Finalize board/schematic for controller (device is 1/2 the size the first prototype was)
+* Prototype 96x16 board (boards arrived 2/10/2012, hand-soldering first board)
+* Source and purchase correct LED matrix pieces, original ones were common anode, need common cathode pieces (this was a supplier error in not stating what type their boards were)
+* E-test Display board
+* Finalize board/schematic for controller (device is 1/2 the size of first prototype)
 * Find or develop tool to allow updating firmware on the board (USB parts are there, so new firmware updates can be sent out to users)
 * Other stuff
 
