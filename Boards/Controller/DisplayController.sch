@@ -5495,9 +5495,6 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
 <part name="U2" library="SparkFun" deviceset="FT232RQ" device=""/>
-<part name="RN3" library="resistor-dil" deviceset="4R-N" device="EXB38V" value="1k">
-<attribute name="OC_NEWARK" value="15M6870"/>
-</part>
 <part name="J1" library="MyParts" deviceset="USB" device="0001LF">
 <attribute name="NEWARK_PN" value="82R7424"/>
 </part>
@@ -6247,8 +6244,6 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 <instance part="C6" gate="G$1" x="106.68" y="86.36" rot="MR270"/>
 <instance part="C7" gate="G$1" x="106.68" y="73.66" rot="MR270"/>
 <instance part="U3" gate="A" x="71.12" y="101.6"/>
-<instance part="RN3" gate="B" x="104.14" y="127"/>
-<instance part="RN3" gate="C" x="104.14" y="121.92"/>
 <instance part="U5" gate="G$1" x="187.96" y="99.06"/>
 <instance part="GND7" gate="1" x="172.72" y="88.9"/>
 <instance part="GND9" gate="1" x="215.9" y="88.9"/>
@@ -6528,31 +6523,21 @@ Simple slide switch. Spark Fun Electronics SKU : COM-00102</description>
 </net>
 <net name="RX" class="0">
 <segment>
-<pinref part="RN3" gate="B" pin="2"/>
-<wire x1="109.22" y1="127" x2="111.76" y2="127" width="0.1524" layer="91"/>
-<label x="111.76" y="127" size="1.778" layer="95" xref="yes"/>
+<wire x1="109.22" y1="125.73" x2="111.76" y2="125.73" width="0.1524" layer="91"/>
+<label x="111.76" y="125.73" size="1.778" layer="95" xref="yes"/>
+<pinref part="U3" gate="A" pin="PD0"/>
+<wire x1="88.9" y1="124.46" x2="106.68" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="124.46" x2="106.68" y2="125.73" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="125.73" x2="106.68" y2="125.73" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TX" class="0">
 <segment>
-<pinref part="RN3" gate="C" pin="2"/>
 <wire x1="109.22" y1="121.92" x2="111.76" y2="121.92" width="0.1524" layer="91"/>
 <label x="111.76" y="121.92" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
 <pinref part="U3" gate="A" pin="PD1"/>
-<pinref part="RN3" gate="C" pin="1"/>
 <wire x1="88.9" y1="121.92" x2="99.06" y2="121.92" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="U3" gate="A" pin="PD0"/>
-<pinref part="RN3" gate="B" pin="1"/>
-<wire x1="88.9" y1="124.46" x2="99.06" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="124.46" x2="99.06" y2="127" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="121.92" x2="99.06" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
