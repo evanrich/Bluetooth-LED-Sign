@@ -4,6 +4,8 @@ The Bluetooth sign project started out originally from me wanting a wireless sig
 
 The project has many uses, from digital cube/office name or status signs (out of office?) to vehicle/store signs.
 
+Please note that this is not complete yet.  see the Works/Doesn't work section below for info on what has been tested, and what still may not work before trying any of this yourself.
+
 **Source code**
 
 * https://github.com/evanrich/Bluetooth-LED-Sign
@@ -27,9 +29,18 @@ The project has many uses, from digital cube/office name or status signs (out of
 * Android: Voice Control - enter messages using your voice
 * Android: History - Resend any of the last recently used messages by taping on it and hitting send.
 
+**Works/Don't know if works** <br>
+Works: Android remote (still improving UI and features however) (tested with arduino, and bluetooth module)<br>
+Works: .NET code (tested with arduino Uno hooked to sure 3216 displays)<br>
+Works: Using Bluetooth to send messages to displays (tested with arduino<br>
+Works: controller code (tested on arduino uno)<br>
+Don't know if works: the controller.   The controller itself works, as well as the controller code, on an arduino uno board. In my original two prototypes however, I first hooked up the FT232 wrong (tx->tx, Rx->rx), so i couldn't test loading code that way, and in the 2nd prototype, I hooked the bluetooth up incorrectly (reset wasn't connected right, tx/rx were messed up again, etc) For the third prototype (currently in "Boards" folder, I took my working base controller (arduino-ish) and a known good bluetooth wiring (what i used to make a break out board) and combined them.   I am waiting on the boards to come in from batchpcb.com (in about two weeks or so) to build and test, but they should work.<br>
+
 
 
 **Known issues**
+
+2/14/2012 (14/2/2012 for those of you in the rest of the world):  I've discovered that the 8x8 matrix pieces that I ordered from Sure electronics were the wrong type.  They sent me common Anode displays, the schematics/orignal 3216 boards use common cathode displays.   I've contacted a few suppliers to find a cheap display (some retailers are selling pieces for 4$ a piece, cost prohibitive, as the modules alone would cost more than 3 sure 3216 displays.) I'm looking into 100Led.com and a few others suppliers to try and get a price quote, although some will not do anything below 1000 pieces.   The Board build is on hold for now, although the controller is progressing (waiting on boards to be delivered from Batchpcb.com)  I'll provide updates here when I get more info.  
 
 * Arduino library code will not work with more than 2 displays (issue with the library, not my code)
 * Android: If a Repeat is issued to the display, it will loop the text until a new message is sent.
@@ -42,7 +53,6 @@ The project has many uses, from digital cube/office name or status signs (out of
 * Write Fuel Guage code to allow transmission or display of remaining battery capacity
 * Prototype 96x16 board (boards arrived 2/10/2012, hand-soldering first board)
 * Source and purchase correct LED matrix pieces, original ones were common anode, need common cathode pieces (this was a supplier error in not stating what type their boards were)
-* E-test Display board
 * Finalize board/schematic for controller (device is 1/2 the size of first prototype)
 * Find or develop tool to allow updating firmware on the board (USB parts are there, so new firmware updates can be sent out to users)
 * Other stuff
