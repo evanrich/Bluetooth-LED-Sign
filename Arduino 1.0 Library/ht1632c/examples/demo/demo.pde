@@ -1,16 +1,18 @@
 #include <avr/io.h> 
 #include <avr/wdt.h>
 #include <avr/pgmspace.h>
-#include <WProgram.h>
 #include <DS1307RTC.h>
 #include <Time.h>
 #include <TimerOne.h>
 #include <Wire.h>
+// #include <SPI.h> // if somebody wanna try with hw SPI
 #include <ht1632c.h>
 
 
 ht1632c dotmatrix = ht1632c(PORTD, 7, 6, 4, 5, GEOM_32x16, 2);
 
+// if somebody wanna try with hw SPI
+// ht1632c dotmatrix = ht1632c(PORTB, 3, 5, 0, 1, GEOM_32x16, 2);
 
 void setup ()
 {
@@ -28,20 +30,6 @@ void setup ()
 
 char fps_str[15];
 
-void compute_fps() {
-  static const byte kComputeEveryFrames = 500;
-  static unsigned long last_millis = 0;
-  static int cnt_frames = 0;
-  if (++cnt_frames == kComputeEveryFrames) {
-    cnt_frames = 0;
-    float fps = kComputeEveryFrames / ((millis() - last_millis) / 1000);
-    sprintf(fps_str, "%d fps ", (int)fps);
-    Serial.println(fps_str); 
-    last_millis = millis();
-  }
-}
-
-
 // Vertical lines moving from right to left. With this pattern, at each new
 // frame half of the pixels are completely modified (i.e. both in the red and green
 // plane), and half change only in one plane (i.e. only red or green).
@@ -57,7 +45,7 @@ void launch_fps_benchmark() {
       }
     }
     dotmatrix.sendframe();
-    compute_fps();
+    dotmatrix.profile();
     if (frames > 500) return;
   }
 }
@@ -92,6 +80,7 @@ void loop ()
   Timer1.attachInterrupt(callback); 
   
   dotmatrix.clear();
+  sprintf(fps_str, "%d fps ", dotmatrix.fps);
   dotmatrix.hscrolltext(8, fps_str, RED, 50, 1, LEFT);
 
   char tmp[20] = "The end ;-)";
@@ -100,30 +89,29 @@ void loop ()
      dotmatrix.putchar(6*i,  8, tmp[i], ORANGE);
   dotmatrix.sendframe();
 
-byte v;
-for (v = 0; v < 16; v++)
-{
-  dotmatrix.pwm(v);
-  (v < 4) ? delay(50) : delay (100);
-} 
-for (v = 15; v > 0; v--)
-{
-  dotmatrix.pwm(v);
-  (v < 4) ? delay(50) : delay (100);
-} 
-for (v = 0; v < 16; v++)
-{
-  dotmatrix.pwm(v);
-  (v < 4) ? delay(50) : delay (100);
-} 
-for (v = 15; v > 0; v--)
-{
-  dotmatrix.pwm(v);
-  (v < 4) ? delay(50) : delay (100);
-} 
+  byte v;
+  for (v = 0; v < 16; v++)
+  {
+    dotmatrix.pwm(v);
+    (v < 4) ? delay(50) : delay (100);
+  } 
+  for (v = 15; v > 0; v--)
+  {
+    dotmatrix.pwm(v);
+    (v < 4) ? delay(50) : delay (100);
+  } 
+  for (v = 0; v < 16; v++)
+  {
+    dotmatrix.pwm(v);
+    (v < 4) ? delay(50) : delay (100);
+  } 
+  for (v = 15; v > 0; v--)
+  {
+    dotmatrix.pwm(v);
+    (v < 4) ? delay(50) : delay (100);
+  } 
   delay (1000);
   dotmatrix.clear();
-return;  
-
+  return;  
 }
 

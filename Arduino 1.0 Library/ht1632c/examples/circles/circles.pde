@@ -3,7 +3,7 @@
 ht1632c dotmatrix = ht1632c(PORTD, 7, 6, 4, 5, GEOM_32x16, 2);
 
 void setup() {
-  ledMatrix.clear();
+  dotmatrix.clear();
 }
 
 void loop() {

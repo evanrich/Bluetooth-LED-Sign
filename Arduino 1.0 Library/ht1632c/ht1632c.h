@@ -6,32 +6,37 @@
 #ifndef ht1632c_h
 #define ht1632c_h
 
+#if defined(ARDUINO) && ARDUINO >= 100
 #include <Arduino.h>
+#else
+#include <WProgram.h>
+#endif
+
 #include <avr/pgmspace.h>
 
 /*
  * commands written to the chip consist of a 3 bit "ID", followed by
  * either 9 bits of "Command code" or 7 bits of address + 4 bits of data.
  */
-#define HT1632_ID_CMD        4  /* ID = 100 - Commands */
-#define HT1632_ID_RD         6  /* ID = 110 - Read RAM */
-#define HT1632_ID_WR         5  /* ID = 101 - Write RAM */
+#define HT1632_ID_CMD        4	/* ID = 100 - Commands */
+#define HT1632_ID_RD         6	/* ID = 110 - Read RAM */
+#define HT1632_ID_WR         5	/* ID = 101 - Write RAM */
 
-#define HT1632_CMD_SYSDIS 0x00  /* CMD= 0000-0000-x Turn off oscil */
-#define HT1632_CMD_SYSON  0x01  /* CMD= 0000-0001-x Enable system oscil */
-#define HT1632_CMD_LEDOFF 0x02  /* CMD= 0000-0010-x LED duty cycle gen off */
-#define HT1632_CMD_LEDON  0x03  /* CMD= 0000-0011-x LEDs ON */
-#define HT1632_CMD_BLOFF  0x08  /* CMD= 0000-1000-x Blink ON */
-#define HT1632_CMD_BLON   0x09  /* CMD= 0000-1001-x Blink Off */
-#define HT1632_CMD_SLVMD  0x10  /* CMD= 0001-00xx-x Slave Mode */
-#define HT1632_CMD_MSTMD  0x14  /* CMD= 0001-01xx-x Master Mode */
-#define HT1632_CMD_RCCLK  0x18  /* CMD= 0001-10xx-x Use on-chip clock */
-#define HT1632_CMD_EXTCLK 0x1C  /* CMD= 0001-11xx-x Use external clock */
-#define HT1632_CMD_COMS00 0x20  /* CMD= 0010-ABxx-x commons options */
-#define HT1632_CMD_COMS01 0x24  /* CMD= 0010-ABxx-x commons options */
-#define HT1632_CMD_COMS10 0x28  /* CMD= 0010-ABxx-x commons options */
-#define HT1632_CMD_COMS11 0x2C  /* CMD= 0010-ABxx-x commons options */
-#define HT1632_CMD_PWM    0xA0  /* CMD= 101x-PPPP-x PWM duty cycle */
+#define HT1632_CMD_SYSDIS 0x00	/* CMD= 0000-0000-x Turn off oscil */
+#define HT1632_CMD_SYSON  0x01	/* CMD= 0000-0001-x Enable system oscil */
+#define HT1632_CMD_LEDOFF 0x02	/* CMD= 0000-0010-x LED duty cycle gen off */
+#define HT1632_CMD_LEDON  0x03	/* CMD= 0000-0011-x LEDs ON */
+#define HT1632_CMD_BLOFF  0x08	/* CMD= 0000-1000-x Blink ON */
+#define HT1632_CMD_BLON   0x09	/* CMD= 0000-1001-x Blink Off */
+#define HT1632_CMD_SLVMD  0x10	/* CMD= 0001-00xx-x Slave Mode */
+#define HT1632_CMD_MSTMD  0x14	/* CMD= 0001-01xx-x Master Mode */
+#define HT1632_CMD_RCCLK  0x18	/* CMD= 0001-10xx-x Use on-chip clock */
+#define HT1632_CMD_EXTCLK 0x1C	/* CMD= 0001-11xx-x Use external clock */
+#define HT1632_CMD_COMS00 0x20	/* CMD= 0010-ABxx-x commons options */
+#define HT1632_CMD_COMS01 0x24	/* CMD= 0010-ABxx-x commons options */
+#define HT1632_CMD_COMS10 0x28	/* CMD= 0010-ABxx-x commons options */
+#define HT1632_CMD_COMS11 0x2C	/* CMD= 0010-ABxx-x commons options */
+#define HT1632_CMD_PWM    0xA0	/* CMD= 101x-PPPP-x PWM duty cycle */
 
 #define HT1632_ID_LEN     (1 << 2)  /* IDs are 3 bits */
 #define HT1632_CMD_LEN    (1 << 7)  /* CMDs are 8 bits */
@@ -39,11 +44,11 @@
 #define HT1632_ADDR_LEN   (1 << 6)  /* Address are 7 bits */
 
 #define HT1632_CS_NONE       0  /* None of ht1632c selected */
-#define HT1632_CS_ALL      255  /* All of ht1632c selected */
+#define HT1632_CS_ALL       15  /* All of ht1632c selected */
 
-#define GEOM_32x16          32  /* 32x16 */
-#define GEOM_24x16          24  /* 24x16 */
-#define GEOM_32x8            8  /* 32x8 */
+#define GEOM_32x16	    32	/* 32x16 */
+#define GEOM_24x16	    24	/* 24x16 */
+#define GEOM_32x8	     8	/* 32x8 */
 
 #define BLACK        0
 #define GREEN        1
@@ -87,6 +92,8 @@
 #define FONT_8x16   22
 #define FONT_8x16B  23
 
+#define FONT_8x13BK 118
+
 #define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
 #define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
 
@@ -102,46 +109,10 @@ struct bits {
 } __attribute__((__packed__));
 
 #define SBIT(port,pin) ((*(volatile struct bits*)&port).b##pin)
-/*
-#define _clr(name, port, bit) void ht1632c::name##_clr() { SBIT(port, bit) = 0; }
-#define _set(name, port, bit) void ht1632c::name##_set() { SBIT(port, bit) = 1; }
-#define _out(name, port, bit) void ht1632c::name##_out() { SBIT((_SFR_IO8(_SFR_IO_ADDR(port)-1)), bit) = 1; }
-*/
 #define _clr(name, port, bit) void inline name##_clr() { SBIT(port, bit) = 0; }
 #define _set(name, port, bit) void inline name##_set() { SBIT(port, bit) = 1; }
 #define _out(name, port, bit) void name##_out() { SBIT((_SFR_IO8(_SFR_IO_ADDR(port)-1)), bit) = 1; }
 
-class _data {
-public:
-    _data();
-    void clr();
-    void set();
-};
-
-class _wr {
-public:
-    _wr();
-    void clr();
-    void set();
-};
-
-class _clk {
-public:
-    _clk();
-    void clr();
-    void set();
-    void pulse(byte num);
-};
-
-class _cs {
-public:
-    _cs();
-    void clr();
-    void set();
-};
-
-
-//class ht1632c : private _data, private _wr, private _clk, private _cs {
 class ht1632c : public Print {
 
 #ifdef putchar
@@ -179,13 +150,13 @@ public:
     void bezier(int x0, int y0, int x1, int y1, int x2, int y2, byte color);
     void profile();
     
-    size_t write(uint8_t chr);
-    void write(const char *str);
-    //void write(const uint8_t *buffer, size_t size);
+    virtual size_t write(uint8_t chr);
+    virtual size_t write(const char *str);
+    //virtual size_t write(const uint8_t *buffer, size_t size);
             
     byte *framebuffer;
     word framesize;
-//    byte cs_max;
+    byte cs_max;
     byte x_max;
     byte y_max;
     boolean bicolor;
@@ -196,27 +167,12 @@ public:
     byte x_cur;
     byte y_cur;
     int fps;
-/*
-    void _data_set();
-    void _data_clr();
-    void _data_out();
-    void _wr_set();
-    void _wr_clr();
-    void _wr_out();
-    void _clk_set();
-    void _clk_clr();
-    void _clk_out();
-    void _clk_pulse(byte num);
-    void _cs_set();
-    void _cs_clr();
-    void _cs_out();
-*/
+
 };
 
 
 #ifdef ht1632c_lib
 
-byte cs_max;
 extern    void _data_set();
 extern    void _data_clr();
 extern    void _data_out();
@@ -242,9 +198,8 @@ extern    void _chipselect(byte num);
 #define ht1632c(port, data, wr, clk, cs, ...) ht1632c(__VA_ARGS__); \
 _clr(_data,port,data); _clr(_wr,port,wr); _clr(_clk,port,clk); _clr(_cs,port,cs); \
 _set(_data,port,data); _set(_wr,port,wr); _set(_clk,port,clk); _set(_cs,port,cs); \
-_out(_data,port,data); _out(_wr,port,wr); _out(_clk,port,clk); _out(_cs,port,cs);
+_out(_data,port,data); _out(_wr,port,wr); _out(_clk,port,clk); _out(_cs,port,cs); \
 
-extern    byte cs_max;
 void _data_set();
 void _data_clr();
 void _data_out();
@@ -274,10 +229,10 @@ void _chipselect(register byte cs)
 {
   if (cs == HT1632_CS_ALL) {
     _cs_clr();
-    _clk_pulse(cs_max);
+    _clk_pulse(HT1632_CS_ALL);
   } else if (cs == HT1632_CS_NONE) {
     _cs_set();
-    _clk_pulse(cs_max);
+    _clk_pulse(HT1632_CS_ALL);
   } else {
     _cs_clr();
     _clk_pulse(1);
