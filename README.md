@@ -8,7 +8,7 @@ Please note that this is not complete yet.  see the Works/Doesn't work section b
 
 **Updates**
 
-* 2/29/2012 - Received set of controller boards from batchpcb, waiting on solder stencil to construct
+* 2/29/2012 - Received set of controller boards from batchpcb, waiting on solder stencil to construct.  Updated wiki pages with board scans.
 * 2/28/2012 - Located and sourced set of LED matrix boards, sign is 1/12 finished and working so far.
 
 **Source code**
