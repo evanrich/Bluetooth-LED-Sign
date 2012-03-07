@@ -40,7 +40,7 @@ Works: Android remote (still improving UI and features however) (tested with ard
 Works: .NET code (tested with arduino Uno hooked to sure 3216 displays)<br>
 Works: Using Bluetooth to send messages to displays (tested with arduino<br>
 Works: controller code (tested on arduino uno)<br>
-Don't know if works: the controller.   The controller itself works, as well as the controller code, on an arduino uno board. In my original two prototypes however, I first hooked up the FT232 wrong (tx->tx, Rx->rx), so i couldn't test loading code that way, and in the 2nd prototype, I hooked the bluetooth up incorrectly (reset wasn't connected right, tx/rx were messed up again, etc) For the third prototype (currently in "Boards" folder, I took my working base controller (arduino-ish) and a known good bluetooth wiring (what i used to make a break out board) and combined them.   I am waiting on the boards to come in from batchpcb.com (in about two weeks or so) to build and test, but they should work.<br>
+Don't know if works: the controller.   The controller itself works, as well as the controller code, on an arduino uno board. In my original two prototypes however, I first hooked up the FT232 wrong (tx->tx, Rx->rx), so i couldn't test loading code that way, and in the 2nd prototype, I hooked the bluetooth up incorrectly (reset wasn't connected right, tx/rx were messed up again, etc) For the third prototype (currently in "Boards" folder, I took my working base controller (arduino-ish) and a known good bluetooth wiring (what i used to make a break out board) and combined them.<br>
 
 
 
