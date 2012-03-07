@@ -8,6 +8,7 @@ Please note that this is not complete yet.  see the Works/Doesn't work section b
 
 **Updates**
 
+* 3/07/2012 - Stencils should arive by the end of the week.   I found a supplier for the LED matrix pieces, but they're $3.00 or more each, so this greatly increases the cost of the custom display, somewhat to the fact that unless they were mass-produced, they're be more expensive than just buying 3 3216 boards from sure.   I will be completing the prototype however to validate the design, but I would not recommend it to anyone as cheaper alternative to Sure's offering.   The only way it would be cheaper is if the modules were <$0.99 each.  The controller still remains an option.
 * 2/29/2012 - Received set of controller boards from batchpcb, waiting on solder stencil to construct.  Updated wiki pages with board scans.
 * 2/28/2012 - Located and sourced set of LED matrix boards, sign is 1/12 finished and working so far.
 
