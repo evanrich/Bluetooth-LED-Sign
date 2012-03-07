@@ -56,9 +56,7 @@ Don't know if works: the controller.   The controller itself works, as well as t
 * Finalize BOM (~95% complete)
 * Write Fuel Guage code to allow transmission or display of remaining battery capacity
 * Prototype 96x16 board (boards arrived 2/10/2012, hand-soldering first board)
-* Source and purchase correct LED matrix pieces, original ones were common anode, need common cathode pieces (this was a supplier error in not stating what type their boards were)
 * Finalize board/schematic for controller (device is 1/2 the size of first prototype)
-* Find or develop tool to allow updating firmware on the board (USB parts are there, so new firmware updates can be sent out to users)
 * Other stuff
 
 
