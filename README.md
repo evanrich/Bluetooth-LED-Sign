@@ -46,8 +46,6 @@ Don't know if works: the controller.   The controller itself works, as well as t
 
 **Known issues**
 
-2/14/2012 (14/2/2012 for those of you in the rest of the world):  I've discovered that the 8x8 matrix pieces that I ordered from Sure electronics were the wrong type.  They sent me common Anode displays, the schematics/orignal 3216 boards use common cathode displays.   I've contacted a few suppliers to find a cheap display (some retailers are selling pieces for 4$ a piece, cost prohibitive, as the modules alone would cost more than 3 sure 3216 displays.) I'm looking into 100Led.com and a few others suppliers to try and get a price quote, although some will not do anything below 1000 pieces.   The Board build is on hold for now, although the controller is progressing (waiting on boards to be delivered from Batchpcb.com)  I'll provide updates here when I get more info.  
-
 * Arduino library code will not work with more than 2 displays (issue with the library, not my code)
 * Android: If a Repeat is issued to the display, it will loop the text until a new message is sent.
 * VB.NET: If a repeat and color change are issued, the display will not stop repeating until a new color is sent.
