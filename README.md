@@ -7,10 +7,10 @@ The project has many uses, from digital cube/office name or status signs (out of
 Please note that this is not complete yet.  see the Works/Doesn't work section below for info on what has been tested, and what still may not work before trying any of this yourself.
 
 **Updates**
-
-* 3/07/2012 - Stencils should arive by the end of the week.   I found a supplier for the LED matrix pieces, but they're $3.00 or more each, so this greatly increases the cost of the custom display, somewhat to the fact that unless they were mass-produced, they're be more expensive than just buying 3 3216 boards from sure.   I will be completing the prototype however to validate the design, but I would not recommend it to anyone as cheaper alternative to Sure's offering.   The only way it would be cheaper is if the modules were <$0.99 each.  The controller still remains an option.
-* 2/29/2012 - Received set of controller boards from batchpcb, waiting on solder stencil to construct.  Updated wiki pages with board scans.
-* 2/28/2012 - Located and sourced set of LED matrix boards, sign is 1/12 finished and working so far.
+* 3/08/12 - Stencils arrived today, waiting on new order of solder paste (old stuff dried out).    NOTE: I identified an issue with a missing trace in the 96x16 board, that caused the 2nd row of the 3rd and 4th displays on top to not be conected.  I'm working on a new layout and in the meantime will adjust with a wire jumper.
+* 3/07/12 - Stencils should arive by the end of the week.   I found a supplier for the LED matrix pieces, but they're $3.00 or more each, so this greatly increases the cost of the custom display, somewhat to the fact that unless they were mass-produced, they're be more expensive than just buying 3 3216 boards from sure.   I will be completing the prototype however to validate the design, but I would not recommend it to anyone as cheaper alternative to Sure's offering.   The only way it would be cheaper is if the modules were <$0.99 each.  The controller still remains an option.
+* 2/29/12 - Received set of controller boards from batchpcb, waiting on solder stencil to construct.  Updated wiki pages with board scans.
+* 2/28/12 - Located and sourced set of LED matrix boards, sign is 1/12 finished and working so far.
 
 **Source code**
 
