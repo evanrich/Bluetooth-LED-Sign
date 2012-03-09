@@ -6,6 +6,13 @@ The project has many uses, from digital cube/office name or status signs (out of
 
 Please note that this is not complete yet.  see the Works/Doesn't work section below for info on what has been tested, and what still may not work before trying any of this yourself.
 
+**Updates**
+
+* 3/08/12 - Stencils arrived today, waiting on new order of solder paste (old stuff dried out).    NOTE: I identified an issue with a missing trace in the 96x16 board, that caused the 2nd row of the 3rd and 4th displays on top to not be conected.  I'm working on a new layout and in the meantime will adjust with a wire jumper.
+* 3/07/12 - Stencils should arive by the end of the week.   I found a supplier for the LED matrix pieces, but they're $3.00 or more each, so this greatly increases the cost of the custom display, somewhat to the fact that unless they were mass-produced, they're be more expensive than just buying 3 3216 boards from sure.   I will be completing the prototype however to validate the design, but I would not recommend it to anyone as cheaper alternative to Sure's offering.   The only way it would be cheaper is if the modules were <$0.99 each.  The controller still remains an option.
+* 2/29/12 - Received set of controller boards from batchpcb, waiting on solder stencil to construct.  Updated wiki pages with board scans.
+* 2/28/12 - Located and sourced set of LED matrix boards, sign is 1/12 finished and working so far.
+
 **Source code**
 
 * https://github.com/evanrich/Bluetooth-LED-Sign
@@ -34,13 +41,11 @@ Works: Android remote (still improving UI and features however) (tested with ard
 Works: .NET code (tested with arduino Uno hooked to sure 3216 displays)<br>
 Works: Using Bluetooth to send messages to displays (tested with arduino<br>
 Works: controller code (tested on arduino uno)<br>
-Don't know if works: the controller.   The controller itself works, as well as the controller code, on an arduino uno board. In my original two prototypes however, I first hooked up the FT232 wrong (tx->tx, Rx->rx), so i couldn't test loading code that way, and in the 2nd prototype, I hooked the bluetooth up incorrectly (reset wasn't connected right, tx/rx were messed up again, etc) For the third prototype (currently in "Boards" folder, I took my working base controller (arduino-ish) and a known good bluetooth wiring (what i used to make a break out board) and combined them.   I am waiting on the boards to come in from batchpcb.com (in about two weeks or so) to build and test, but they should work.<br>
+Don't know if works: the controller.   The controller itself works, as well as the controller code, on an arduino uno board. In my original two prototypes however, I first hooked up the FT232 wrong (tx->tx, Rx->rx), so i couldn't test loading code that way, and in the 2nd prototype, I hooked the bluetooth up incorrectly (reset wasn't connected right, tx/rx were messed up again, etc) For the third prototype (currently in "Boards" folder, I took my working base controller (arduino-ish) and a known good bluetooth wiring (what i used to make a break out board) and combined them.<br>
 
 
 
 **Known issues**
-
-2/14/2012 (14/2/2012 for those of you in the rest of the world):  I've discovered that the 8x8 matrix pieces that I ordered from Sure electronics were the wrong type.  They sent me common Anode displays, the schematics/orignal 3216 boards use common cathode displays.   I've contacted a few suppliers to find a cheap display (some retailers are selling pieces for 4$ a piece, cost prohibitive, as the modules alone would cost more than 3 sure 3216 displays.) I'm looking into 100Led.com and a few others suppliers to try and get a price quote, although some will not do anything below 1000 pieces.   The Board build is on hold for now, although the controller is progressing (waiting on boards to be delivered from Batchpcb.com)  I'll provide updates here when I get more info.  
 
 * Arduino library code will not work with more than 2 displays (issue with the library, not my code)
 * Android: If a Repeat is issued to the display, it will loop the text until a new message is sent.
@@ -52,9 +57,7 @@ Don't know if works: the controller.   The controller itself works, as well as t
 * Finalize BOM (~95% complete)
 * Write Fuel Guage code to allow transmission or display of remaining battery capacity
 * Prototype 96x16 board (boards arrived 2/10/2012, hand-soldering first board)
-* Source and purchase correct LED matrix pieces, original ones were common anode, need common cathode pieces (this was a supplier error in not stating what type their boards were)
 * Finalize board/schematic for controller (device is 1/2 the size of first prototype)
-* Find or develop tool to allow updating firmware on the board (USB parts are there, so new firmware updates can be sent out to users)
 * Other stuff
 
 
