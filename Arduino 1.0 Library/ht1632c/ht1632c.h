@@ -12,7 +12,28 @@
 #include <WProgram.h>
 #endif
 
-#include <avr/pgmspace.h>
+/* Arduino specific definitions */
+
+#if defined(__AVR__)
+#endif
+
+/* Chipkit specific definitions */
+
+#if defined(__PIC32MX__)
+#endif
+
+/* Leaflab Maple specific definitions */
+
+#if defined (__ARMEL__)
+typedef unsigned char uint8_t;
+typedef unsigned int uint16_t;
+typedef unsigned char prog_uint8_t;
+typedef unsigned int prog_uint16_t;
+uint8_t inline pgm_read_byte_near(uint8_t *ptr) { return (uint8_t)*ptr; }
+uint16_t inline pgm_read_word_near(uint16_t *ptr) { return (uint16_t)*ptr; }
+#define PROGMEM __FLASH__
+#define inline inline __attribute__((always_inline))
+#endif
 
 /*
  * commands written to the chip consist of a 3 bit "ID", followed by
@@ -44,7 +65,7 @@
 #define HT1632_ADDR_LEN   (1 << 6)  /* Address are 7 bits */
 
 #define HT1632_CS_NONE       0  /* None of ht1632c selected */
-#define HT1632_CS_ALL       15  /* All of ht1632c selected */
+#define HT1632_CS_ALL       32 /* All of ht1632c selected */
 
 #define GEOM_32x16	    32	/* 32x16 */
 #define GEOM_24x16	    24	/* 24x16 */
@@ -87,31 +108,39 @@
 #define FONT_8x13   17
 #define FONT_8x13B  18
 //#define FONT_8x13O  19
-#define FONT_9x15   20
-#define FONT_9x15B  21
+//#define FONT_9x15   20
+//#define FONT_9x15B  21
 #define FONT_8x16   22
 #define FONT_8x16B  23
 
-#define FONT_8x13BK 118
+//#define FONT_8x13BK 118
 
-#define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
-#define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
+/* USE_NLFB experimental feature: use nonlinear framebuffer addressing, faster then linear addressing */
+#define USE_NLFB 
 
-struct bits {
-  uint8_t b0:1;
-  uint8_t b1:1;
-  uint8_t b2:1;
-  uint8_t b3:1;
-  uint8_t b4:1;
-  uint8_t b5:1;
-  uint8_t b6:1;
-  uint8_t b7:1;
-} __attribute__((__packed__));
+/* USE_ASM experimental feature: use assembler for low level function, faster then C for bitbanging */
+#define USE_ASM
 
-#define SBIT(port,pin) ((*(volatile struct bits*)&port).b##pin)
-#define _clr(name, port, bit) void inline name##_clr() { SBIT(port, bit) = 0; }
-#define _set(name, port, bit) void inline name##_set() { SBIT(port, bit) = 1; }
-#define _out(name, port, bit) void name##_out() { SBIT((_SFR_IO8(_SFR_IO_ADDR(port)-1)), bit) = 1; }
+/* assembler low level functions only for AVR */
+#if defined (__ARMEL__) || defined (__PIC32MX__)
+#undef USE_ASM
+#endif
+
+/* from Arduino >= 1.0 Print functions returns size_t instead of void */
+#if defined(ARDUINO) && ARDUINO >= 100
+#define PRINT_NEW
+#endif
+
+/* Chipkit and Leaflab Maple structure for defining a port (port register address and bit mask for pin) */
+struct _port_t {
+#if defined (__ARMEL__)
+  gpio_dev *dev;
+  uint8_t mask;
+#elif defined (__PIC32MX__)
+  volatile p32_ioport *regs;
+  uint16_t mask;
+#endif
+};
 
 class ht1632c : public Print {
 
@@ -120,137 +149,83 @@ class ht1632c : public Print {
 #endif
 
 public:
-    //ht1632c(volatile uint8_t *port, const byte data, const byte wr, const byte clk, const byte cs, const byte geometry, const byte number);
-    ht1632c(const byte geometry, const byte number = 1);
-    //void begin(const byte data, const byte wr, const byte clk, const byte cs, byte geometry, byte number);
-    //void begin(const byte data, const byte wr, const byte cs1, const byte cs2, const byte cs3, const byte cs4, byte geometry, byte number);
+    ht1632c(const uint8_t data, const uint8_t wr, const uint8_t clk, const uint8_t cs, const uint8_t geometry, const uint8_t number);
+    ht1632c(volatile uint8_t *port, const uint8_t data, const uint8_t wr, const uint8_t clk, const uint8_t cs, const uint8_t geometry, const uint8_t number);
 
-//    void chipselect(byte cs);
-//    void writebits (byte bits, byte len);
-    void sendcmd(byte cs, byte command);
-    void setup();
-    void pwm(byte value);
+    void pwm(uint8_t value);
     void sendframe();
     void clear();
-    void update_framebuffer(word addr, byte target_bitval, byte pixel_bitval);
-    void plot(byte x, byte y, byte color);
-    byte getpixel(byte x, byte y);
-    byte putchar(int x, int y, char c, byte color = GREEN, byte attr = 0);
-    void putbitmap(int x, int y, prog_uint16_t *bitmap, byte w, byte h, byte color);
-    void hscrolltext(int y, char *text, byte color, int delaytime, int times = 1, byte dir = LEFT);
-    void vscrolltext(int x, char *text, byte color, int delaytime, int times = 1, byte dir = UP);
-    void setfont(byte userfont);
-    void line(int x0, int y0, int x1, int y1, byte color);
-    void rect(int x0, int y0, int x1, int y1, byte color);
-    void circle(int xm, int ym, int r, byte color);
-    void ellipse(int x0, int y0, int x1, int y1, byte color);
-    void fill_r(byte x, byte y, byte color);
-    void fill_l(byte x, byte y, byte color);
-    void fill(byte x, byte y, byte color);
-    void bezier(int x0, int y0, int x1, int y1, int x2, int y2, byte color);
+    void plot(uint8_t x, uint8_t y, uint8_t color);
+    uint8_t getpixel(uint8_t x, uint8_t y);
+    uint8_t putchar(int x, int y, char c, uint8_t color = GREEN, uint8_t attr = 0, uint8_t bgcolor = BLACK);
+    void putbitmap(int x, int y, prog_uint16_t *bitmap, uint8_t w, uint8_t h, uint8_t color);
+    void hscrolltext(int y, char *text, uint8_t color, int delaytime, int times = 1, uint8_t dir = LEFT, uint8_t attr = 0, uint8_t bgcolor = BLACK);
+    void vscrolltext(int x, char *text, uint8_t color, int delaytime, int times = 1, uint8_t dir = UP, uint8_t attr = 0, uint8_t bgcolor = BLACK);
+    void setfont(uint8_t userfont);
+    void line(int x0, int y0, int x1, int y1, uint8_t color);
+    void rect(int x0, int y0, int x1, int y1, uint8_t color);
+    void circle(int xm, int ym, int r, uint8_t color);
+    void ellipse(int x0, int y0, int x1, int y1, uint8_t color);
+    void fill(uint8_t x, uint8_t y, uint8_t color);
+    void bezier(int x0, int y0, int x1, int y1, int x2, int y2, uint8_t color);
     void profile();
-    
+#ifdef PRINT_NEW
     virtual size_t write(uint8_t chr);
     virtual size_t write(const char *str);
-    //virtual size_t write(const uint8_t *buffer, size_t size);
-            
-    byte *framebuffer;
-    word framesize;
-    byte cs_max;
-    byte x_max;
-    byte y_max;
+#else
+    virtual void write(uint8_t chr);
+    virtual void write(const char *str);
+#endif
+
+    uint8_t x_max;
+    uint8_t y_max;
+    int fps;
+
+private:
+    void _sendcmd(uint8_t cs, uint8_t command);
+    void _setup(uint8_t number);
+    void _update_fb(uint8_t *ptr, uint8_t target, uint8_t pixel);
+
+    void _set(uint8_t val);
+    void _toggle(uint8_t val);
+    void _reset(uint8_t val);
+    void _pulse(uint8_t num, uint8_t val);
+
+    void _set(_port_t port);
+    void _toggle(_port_t port);
+    void _reset(_port_t port);
+    void _pulse(uint8_t num, _port_t port);
+
+    void _writebits (uint8_t bits, uint8_t msb);
+    void _chipselect(uint8_t cs);
+
+    void _fill_r(uint8_t x, uint8_t y, uint8_t color);
+    void _fill_l(uint8_t x, uint8_t y, uint8_t color);
+
+    static uint8_t *g_fb;
+    static uint8_t *r_fb;
+    uint16_t fb_size;
+    uint8_t cs_max;
     boolean bicolor;
     prog_uint8_t *font;
     prog_uint16_t *wfont;
-    byte font_width;
-    byte font_height;
-    byte x_cur;
-    byte y_cur;
-    int fps;
+    uint8_t font_width;
+    uint8_t font_height;
+    uint8_t x_cur;
+    uint8_t y_cur;
 
-};
-
-
-#ifdef ht1632c_lib
-
-extern    void _data_set();
-extern    void _data_clr();
-extern    void _data_out();
-extern    void _wr_set();
-extern    void _wr_clr();
-extern    void _wr_out();
-extern    void _clk_set();
-extern    void _clk_clr();
-extern    void _clk_out();
-extern    void _clk_pulse(byte num);
-extern    void _cs_set();
-extern    void _cs_clr();
-extern    void _cs_out();
-extern    void _writebits(byte bits, byte msb);
-extern    void _chipselect(byte num);
-
-#endif 
-
-//extern ht1632class ht1632c;
-
-#ifndef ht1632c_lib
-
-#define ht1632c(port, data, wr, clk, cs, ...) ht1632c(__VA_ARGS__); \
-_clr(_data,port,data); _clr(_wr,port,wr); _clr(_clk,port,clk); _clr(_cs,port,cs); \
-_set(_data,port,data); _set(_wr,port,wr); _set(_clk,port,clk); _set(_cs,port,cs); \
-_out(_data,port,data); _out(_wr,port,wr); _out(_clk,port,clk); _out(_cs,port,cs); \
-
-void _data_set();
-void _data_clr();
-void _data_out();
-void _wr_set();
-void _wr_clr();
-void _wr_out();
-void _clk_set();
-void _clk_clr();
-void _clk_out();
-void _clk_pulse(byte num);
-void _cs_set();
-void _cs_clr();
-void _cs_out();
-void _writebits(byte bits, byte msb);
-void _chipselect(byte num);
-
-void inline _clk_pulse(register byte num)
-{
-  while(num--)
-  {
-    _clk_set();
-    _clk_clr();
-  }
-}
-
-void _chipselect(register byte cs)
-{
-  if (cs == HT1632_CS_ALL) {
-    _cs_clr();
-    _clk_pulse(HT1632_CS_ALL);
-  } else if (cs == HT1632_CS_NONE) {
-    _cs_set();
-    _clk_pulse(HT1632_CS_ALL);
-  } else {
-    _cs_clr();
-    _clk_pulse(1);
-    _cs_set();
-    _clk_pulse(cs - 1);
-  }
-}
-
-void _writebits (register byte bits, register byte msb)
-{
-  while (msb) {
-    !!(bits & msb) ? _data_set() : _data_clr();
-    _wr_clr();
-    _wr_set();
-    msb >>= 1;
-  }
-}
-
+    static volatile uint8_t *_port;
+#if defined (__AVR__)
+    static uint8_t _data;
+    static uint8_t _wr;
+    static uint8_t _clk;
+    static uint8_t _cs;
+#elif defined (__ARMEL__) || defined (__PIC32MX__)
+    static _port_t _data;
+    static _port_t _wr;
+    static _port_t _clk;
+    static _port_t _cs;
 #endif
+};
 
 #endif

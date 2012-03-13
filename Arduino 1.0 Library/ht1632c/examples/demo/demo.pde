@@ -5,14 +5,9 @@
 #include <Time.h>
 #include <TimerOne.h>
 #include <Wire.h>
-// #include <SPI.h> // if somebody wanna try with hw SPI
 #include <ht1632c.h>
 
-
-ht1632c dotmatrix = ht1632c(PORTD, 7, 6, 4, 5, GEOM_32x16, 2);
-
-// if somebody wanna try with hw SPI
-// ht1632c dotmatrix = ht1632c(PORTB, 3, 5, 0, 1, GEOM_32x16, 2);
+ht1632c dotmatrix = ht1632c(&PORTD, 7, 6, 4, 5, GEOM_32x16, 2);
 
 void setup ()
 {

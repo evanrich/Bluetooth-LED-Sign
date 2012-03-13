@@ -1,6 +1,6 @@
 #include <ht1632c.h>
 
-ht1632c dotmatrix = ht1632c(PORTD, 7, 6, 4, 5, GEOM_32x16, 2);
+ht1632c dotmatrix = ht1632c(&PORTD, 7, 6, 4, 5, GEOM_32x16, 2);
 
 void setup ()
 {
