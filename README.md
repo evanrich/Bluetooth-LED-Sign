@@ -61,6 +61,15 @@ Don't know if works: the controller.   The controller itself works, as well as t
 * Finalize board/schematic for controller (device is 1/2 the size of first prototype)
 * Other stuff
 
+**How You can Help!**
+
+So you want to help contribute and make this better? Awesome!   Here are a few things I could use some help on..
+
+* IOS version of the mobile code (as much as I hate Iphones, some people use them)
+* nicer looking GUI for both android and desktop apps
+* Code optimization!  (I'm not really a C or C++ coder, so I'm sure there are bits in my code that can be optimized, but I don't know what)
+* New Ideas/improvements!
+
 
 **Questions/Support**
 
