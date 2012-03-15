@@ -34,36 +34,37 @@ public final class R {
         public static final int upbutton=0x7f02000b;
     }
     public static final class id {
-        public static final int LinearLayout01=0x7f080000;
-        public static final int OkButton=0x7f080003;
-        public static final int TextView01=0x7f080001;
-        public static final int TextView02=0x7f080002;
-        public static final int TextView_MessageColor=0x7f080014;
-        public static final int TextView_MessageSpeed=0x7f080016;
-        public static final int about=0x7f08001c;
-        public static final int button_scan=0x7f08000a;
-        public static final int button_send=0x7f080010;
-        public static final int button_speak=0x7f080011;
-        public static final int discoverable=0x7f08001a;
-        public static final int edit_text_out=0x7f08000d;
-        public static final int exit=0x7f08001d;
-        public static final int in=0x7f08000c;
-        public static final int linearLayout1=0x7f08000f;
-        public static final int linearLayout2=0x7f080012;
-        public static final int main=0x7f08000b;
-        public static final int new_devices=0x7f080009;
-        public static final int paired_devices=0x7f080007;
-        public static final int repeat_toggle=0x7f08000e;
-        public static final int root=0x7f080013;
-        public static final int secure_connect_scan=0x7f080019;
-        public static final int seekBar1=0x7f080018;
-        public static final int settings=0x7f08001b;
-        public static final int spinColor=0x7f080015;
-        public static final int title_left_text=0x7f080004;
-        public static final int title_new_devices=0x7f080008;
-        public static final int title_paired_devices=0x7f080006;
-        public static final int title_right_text=0x7f080005;
-        public static final int txtSpeed=0x7f080017;
+        public static final int LinearLayout01=0x7f090000;
+        public static final int OkButton=0x7f090003;
+        public static final int TextView01=0x7f090001;
+        public static final int TextView02=0x7f090002;
+        public static final int TextView_MessageColor=0x7f090014;
+        public static final int TextView_MessageSpeed=0x7f090016;
+        public static final int about=0x7f09001d;
+        public static final int button_scan=0x7f09000a;
+        public static final int button_send=0x7f090010;
+        public static final int button_speak=0x7f090011;
+        public static final int checkBox1=0x7f090019;
+        public static final int discoverable=0x7f09001b;
+        public static final int edit_text_out=0x7f09000d;
+        public static final int exit=0x7f09001e;
+        public static final int in=0x7f09000c;
+        public static final int linearLayout1=0x7f09000f;
+        public static final int linearLayout2=0x7f090012;
+        public static final int main=0x7f09000b;
+        public static final int new_devices=0x7f090009;
+        public static final int paired_devices=0x7f090007;
+        public static final int repeat_toggle=0x7f09000e;
+        public static final int root=0x7f090013;
+        public static final int secure_connect_scan=0x7f09001a;
+        public static final int seekBar1=0x7f090018;
+        public static final int settings=0x7f09001c;
+        public static final int spinColor=0x7f090015;
+        public static final int title_left_text=0x7f090004;
+        public static final int title_new_devices=0x7f090008;
+        public static final int title_paired_devices=0x7f090006;
+        public static final int title_right_text=0x7f090005;
+        public static final int txtSpeed=0x7f090017;
     }
     public static final class layout {
         public static final int aboutdialog=0x7f030000;
@@ -76,7 +77,7 @@ public final class R {
         public static final int settings=0x7f030007;
     }
     public static final class menu {
-        public static final int option_menu=0x7f070000;
+        public static final int option_menu=0x7f080000;
     }
     public static final class string {
         public static final int About=0x7f050012;
@@ -111,5 +112,10 @@ public final class R {
         public static final int title_paired_devices=0x7f05000b;
         public static final int voice_matches_header=0x7f050015;
         public static final int voicecontent=0x7f050019;
+    }
+    public static final class style {
+        /**  Any customizations for your app running on pre-3.0 devices here 
+         */
+        public static final int MyTheme=0x7f070000;
     }
 }

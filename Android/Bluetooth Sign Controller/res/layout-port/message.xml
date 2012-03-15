@@ -22,4 +22,4 @@
     android:shadowDy="2"
     android:shadowRadius="2"
     android:padding="5dp"
-	android:textColor="@color/White"/>
+	android:textColor="@color/Black"/>

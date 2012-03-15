@@ -169,15 +169,30 @@ public class BluetoothChat extends Activity {
 			Log.e(TAG, "+++ ON CREATE +++");
 
 		// Set up the window layout
-		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+		if (android.os.Build.VERSION.SDK_INT <= 10) {
+			requestWindowFeature(Window.FEATURE_NO_TITLE);
+		} else {
+			requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+		}
+
+		// if (android.os.Build.VERSION.SDK_INT >= 11) {
+		// setTheme(android.R.style.Theme_Holo_Light_Dialog);
+		// }
+
 		setContentView(R.layout.main);
 		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,
 				R.layout.custom_title);
 
 		// Set up the custom title
 		mTitle = (TextView) findViewById(R.id.title_left_text);
+		if (android.os.Build.VERSION.SDK_INT >= 11) {
+			mTitle.setTextColor(getResources().getColor(R.color.Black));
+		}
 		mTitle.setText(R.string.appshortname);
 		mTitle = (TextView) findViewById(R.id.title_right_text);
+		if (android.os.Build.VERSION.SDK_INT >= 11) {
+			mTitle.setTextColor(getResources().getColor(R.color.Black));
+		}
 
 		// Get local Bluetooth adapter
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();

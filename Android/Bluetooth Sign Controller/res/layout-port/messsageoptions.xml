@@ -33,7 +33,7 @@
 
         <TextView
             android:id="@+id/txtSpeed"
-            android:layout_width="30dp"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="0.15"
             android:text="100"
@@ -48,5 +48,11 @@
         android:max="9"
         android:paddingLeft="4dp"
         android:thumb="@drawable/upbutton" android:paddingRight="4dp" android:progress="3"/>
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="One-press send for old messages " />
 
 </LinearLayout>
