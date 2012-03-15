@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.evanrich.android.BluetoothSignController"
        android:versionCode="1"
-      android:versionName="1.0 r48">
+      android:versionName="1.0 r51">
     <uses-sdk minSdkVersion="5" android:minSdkVersion="5" android:targetSdkVersion="9"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -20,6 +20,6 @@
         </activity>
         <activity android:name=".DeviceListActivity"
                   android:label="@string/select_device"
-                  android:theme="@android:style/Theme.Dialog"/>uj
+                  android:theme="@style/DialogTheme"/>uj
     </application>
 </manifest>

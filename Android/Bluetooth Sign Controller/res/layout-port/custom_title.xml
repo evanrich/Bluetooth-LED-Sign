@@ -21,19 +21,16 @@
   <TextView android:id="@+id/title_left_text"
       android:layout_alignParentLeft="true"
       android:ellipsize="end"
-      android:singleLine="true"
       style="?android:attr/windowTitleStyle"
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
-      android:layout_weight="1"
-    android:shadowColor="@color/White"/>
+      android:layout_weight="1" android:textColor="@color/White"/>
     <TextView android:id="@+id/title_right_text"
         android:layout_alignParentRight="true"
         android:ellipsize="end"
-        android:singleLine="true"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:textColor="#fff"
+        android:textColor="@color/White"
         android:layout_weight="1" 
     />
 </RelativeLayout>

@@ -186,12 +186,12 @@ public class BluetoothChat extends Activity {
 		// Set up the custom title
 		mTitle = (TextView) findViewById(R.id.title_left_text);
 		if (android.os.Build.VERSION.SDK_INT >= 11) {
-			mTitle.setTextColor(getResources().getColor(R.color.Black));
+			mTitle.setTextColor(getResources().getColor(R.color.White));
 		}
 		mTitle.setText(R.string.appshortname);
 		mTitle = (TextView) findViewById(R.id.title_right_text);
 		if (android.os.Build.VERSION.SDK_INT >= 11) {
-			mTitle.setTextColor(getResources().getColor(R.color.Black));
+			mTitle.setTextColor(getResources().getColor(R.color.White));
 		}
 
 		// Get local Bluetooth adapter

@@ -17,7 +17,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/OffWhite"
+    android:background="@color/Gray"
     android:orientation="vertical"
     android:weightSum="1" >
 
@@ -29,7 +29,7 @@
         android:fadingEdge="vertical"
         android:smoothScrollbar="true"
         android:stackFromBottom="true"
-        android:transcriptMode="alwaysScroll" >
+        android:transcriptMode="alwaysScroll">
 </ListView>
 
     <LinearLayout
