@@ -7,6 +7,7 @@ Class MainWindow
     Shared serial As SerialPort = New SerialPort
     Dim dblSpeed As Double = 0D
     Dim msgspeed As String
+    Dim OptionsMenu As New frmOptions
 
 
     Public Sub New()
@@ -17,7 +18,7 @@ Class MainWindow
         ' Add any initialization after the InitializeComponent() call.
         AddCom2Combo(cbPortsList)
         btnConnect.Content = "Connect"
-        txtSpeed.Text = dblSpeed.ToString() + " ms"
+
     End Sub
     Public Sub Main()
 
@@ -60,43 +61,43 @@ Class MainWindow
         Dim msgColor As String = ""
 
         'check repeat box for value
-        If chkRepeat.IsChecked Then
+        If OptionsMenu.chkRepeat.IsChecked Then
             repeat = "b"
         Else
             repeat = "c"
         End If
 
-        If colorOrange.IsChecked Then
+        If OptionsMenu.colorOrange.IsChecked Then
             msgColor = "f"
         End If
 
-        If colorRed.IsChecked Then
+        If OptionsMenu.colorRed.IsChecked Then
             msgColor = "e"
         End If
 
-        If colorGreen.IsChecked Then
+        If OptionsMenu.colorGreen.IsChecked Then
 
             msgColor = "d"
         End If
-        If Slider1.Value = 10 Then
+        If OptionsMenu.Slider1.Value = 10 Then
             msgspeed = "q"
-        ElseIf Slider1.Value = 20 Then
+        ElseIf OptionsMenu.Slider1.Value = 20 Then
             msgspeed = "r"
-        ElseIf Slider1.Value = 30 Then
+        ElseIf OptionsMenu.Slider1.Value = 30 Then
             msgspeed = "s"
-        ElseIf Slider1.Value = 40 Then
+        ElseIf OptionsMenu.Slider1.Value = 40 Then
             msgspeed = "t"
-        ElseIf Slider1.Value = 50 Then
+        ElseIf OptionsMenu.Slider1.Value = 50 Then
             msgspeed = "u"
-        ElseIf Slider1.Value = 60 Then
+        ElseIf OptionsMenu.Slider1.Value = 60 Then
             msgspeed = "v"
-        ElseIf Slider1.Value = 70 Then
+        ElseIf OptionsMenu.Slider1.Value = 70 Then
             msgspeed = "w"
-        ElseIf Slider1.Value = 80 Then
+        ElseIf OptionsMenu.Slider1.Value = 80 Then
             msgspeed = "x"
-        ElseIf Slider1.Value = 90 Then
+        ElseIf OptionsMenu.Slider1.Value = 90 Then
             msgspeed = "y"
-        ElseIf Slider1.Value = 100 Then
+        ElseIf OptionsMenu.Slider1.Value = 100 Then
             msgspeed = "z"
 
         End If
@@ -119,10 +120,16 @@ Class MainWindow
 
     End Sub
 
-    Private Sub Slider1_ValueChanged(ByVal sender As System.Object, ByVal e As System.Windows.RoutedPropertyChangedEventArgs(Of System.Double)) Handles Slider1.ValueChanged
+    
 
-        dblSpeed = Slider1.Value
+    Private Sub btnOptions_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btnOptions.Click
+        OptionsMenu.ShowDialog()
 
-        txtSpeed.Text = dblSpeed.ToString() + " ms"
+    End Sub
+
+    Private Sub titlebar_GotMouseCapture(ByVal sender As Object, ByVal e As System.Windows.Input.MouseEventArgs) Handles Label3.MouseLeftButtonDown
+        Me.DragMove()
+
+
     End Sub
 End Class

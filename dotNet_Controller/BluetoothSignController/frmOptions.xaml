@@ -1,0 +1,20 @@
+﻿<Window x:Class="frmOptions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="" Height="225" Width="170" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid>
+        <GroupBox FlowDirection="LeftToRight" Header="Color" Height="96" HorizontalAlignment="Left" Margin="28,34,0,0" Name="GroupBox1" VerticalAlignment="Top" Width="79">
+            <Grid>
+                <RadioButton Content="Green" GroupName="color" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="6,12,0,0" Name="colorGreen" VerticalAlignment="Top" />
+                <RadioButton Content="Orange" GroupName="color" Height="16" HorizontalAlignment="Left" Margin="6,34,0,0" Name="colorOrange" VerticalAlignment="Top" />
+                <RadioButton Content="Red" GroupName="color" Height="16" HorizontalAlignment="Left" Margin="6,56,0,0" Name="colorRed" VerticalAlignment="Top" />
+            </Grid>
+        </GroupBox>
+        <Label Content="Speed:" FlowDirection="LeftToRight" Height="28" HorizontalAlignment="Left" Margin="-1,0,0,0" Name="Label2" VerticalAlignment="Top" />
+        <TextBlock FlowDirection="LeftToRight" Height="28" Margin="108,0,2,0" Name="txtSpeed" Text="" VerticalAlignment="Top" />
+        <Slider FlowDirection="LeftToRight" Height="23" HorizontalAlignment="Right" IsSnapToTickEnabled="True" Margin="0,5,41,0" Maximum="100" Minimum="10" Name="Slider1" SmallChange="10" TickFrequency="10" TickPlacement="BottomRight" Value="40" VerticalAlignment="Top" Width="66" />
+        <Button Content="OK" Height="32" Margin="2,154,79,0" Name="Button1" VerticalAlignment="Top" />
+        <CheckBox Content="Repeat Message" Height="16" HorizontalAlignment="Left" Margin="12,132,0,0" Name="chkRepeat" VerticalAlignment="Top" />
+        <Button Content="Close" Height="32" HorizontalAlignment="Right" Margin="0,154,0,0" Name="Button2" VerticalAlignment="Top" Width="73" />
+    </Grid>
+</Window>

@@ -4,15 +4,15 @@
 winexe
 VB
 .vb
-C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\obj\x86\Debug\
+C:\projects\Bluetooth-LED-Sign\dotNet_Controller\BluetoothSignController\obj\x86\Debug\
 BluetoothSignController
 none
 false
 
-C:\Users\erichardson\Documents\Visual Studio 2010\Projects\BluetoothSignController.NET\BluetoothSignController\Application.xaml
-11151548125
+C:\projects\Bluetooth-LED-Sign\dotNet_Controller\BluetoothSignController\Application.xaml
+2-2137225830
 
-7-1720583966
+8-146568868
 61073839291
-MainWindow.xaml;
+frmOptions.xaml;MainWindow.xaml;
 

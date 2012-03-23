@@ -6,7 +6,15 @@ BluetoothSignController
 </name>
 </assembly>
 <members>
-<member name="M:BluetoothSignController.Application.InitializeComponent">
+<member name="M:BluetoothSignController.MainWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:BluetoothSignController.MainWindow">
+	<summary>
+MainWindow
+</summary>
+</member><member name="M:BluetoothSignController.Application.InitializeComponent">
 	<summary>
 InitializeComponent
 </summary>
@@ -18,13 +26,26 @@ Application Entry Point.
 	<summary>
 Application
 </summary>
-</member><member name="M:BluetoothSignController.MainWindow.InitializeComponent">
+</member><member name="M:BluetoothSignController.frmOptions.InitializeComponent">
 	<summary>
 InitializeComponent
 </summary>
-</member><member name="T:BluetoothSignController.MainWindow">
+</member><member name="T:BluetoothSignController.frmOptions">
 	<summary>
-MainWindow
+frmOptions
+</summary>
+</member><member name="P:BluetoothSignController.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:BluetoothSignController.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:BluetoothSignController.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member><member name="P:BluetoothSignController.My.MyWpfExtension.Application">
 	<summary>
@@ -52,19 +73,6 @@ MainWindow
  Module used to define the properties that are available in the My Namespace for WPF
  </summary>
 	<remarks></remarks>
-</member><member name="P:BluetoothSignController.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:BluetoothSignController.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:BluetoothSignController.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
 </member>
 </members>
 </doc>
