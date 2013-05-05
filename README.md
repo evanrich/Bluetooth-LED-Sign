@@ -8,8 +8,7 @@ Please note that this is not complete yet.  see the Works/Doesn't work section b
 
 **Updates**
 
-* 5/4/13  - This project is considered depricated, as I stopped working on it for a while due to other life concerns.  I have picked it back up however in a new repository.  Please see the following: 
-<a rel="license" href="https://github.com/evanrich/92x16LED-Display">
+* 5/4/13  - This project is considered depricated, as I stopped working on it for a while due to other life concerns.  I have picked it back up however in a new repository.  Please see the following: https://github.com/evanrich/92x16LED-Display
 * 4/10/12 - Built control board, verified working, however something is wrong with serial communications between Atmega328 and both FT232 and bluetooth.  Need to diagnose.  Tested using modified code, when any input comes from bluetooth,display text.  This worked.  However looking at the data coming through, it's garbage text.  Since both the serial data comign into and out of the atmega is suspect, I think it's something with the atmega itself, as doing a simple serial.println("test"); gives garbage out.   I've been busy but need to investigate.
 * 3/13/12 - 9616 Board does not fully work.  the first third works, but there seems to be issues with the 2nd and 3rd sections.   Need to get an oscilloscope to check, do not use at this time.  Only the controller should work (waiting on solder paste to arrive to build)
 * 3/09/12 - 1/3 of 9616 display finished and working so far, will continue to build rest of it while waiting for solder paste.  I'm thinking that the 1A supply built onto the control board may not be enough to drive every LED (~1.5-2A) for 3 displays, so I'm going to start working on a higher current design in addition to this that can supply up to 3A
